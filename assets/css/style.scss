@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Oxygen:wght@400;700&display=swap');
+
+// Variaveis de cores
+
+$branco: #efefef;
+$vermelho-escuro: #800603;
+$vermelho: #cc0a05;
+$rosa: #FFA2BF;
+
+body{
+    font-family: "Oxygen", sans-serif;
+    font-size: 18px;
+}
+
+section{
+    padding: 80px 0;
+}
+
+h1, h2, h3{
+    font-family: "Cormorant Garamond", serif;
+}
+
+h1{
+    font-size: 4rem;
+    margin-bottom: 40px;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.underscore-title::before{
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: $rosa;
+    display: inline-block;
+}
+
+.btn{
+    background-color: $vermelho;
+    color: $branco;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    &:hover{
+        color: $branco;
+        background-color: $vermelho-escuro;
+    }
+}
+
+.main-header{
+    -webkit-box-shadow: 0px 0px 6px 0px #000000; 
+    box-shadow: 0px 0px 6px 0px #000000;
+    .navbar-collapse{
+        justify-content: end;
+        .navbar-nav{
+            gap:20px;
+            align-items: center;
+        }
+    }
+}
+
+.intro{
+    background: url('../img/bg-intro.jpg') no-repeat center center/cover;
+    color: $branco;
+    p{
+        margin-bottom: 20px;
+    }
+}
+
+.about-me{
+
+    .row{
+        align-items: center;
+    }
+
+    .profile-pic{
+        max-width: 100%;
+    }
+
+    p{
+        line-height: 1.75rem;
+
+        &:last-child{
+            font-weight: bold;
+        }
+    }
+}
+
+.cto1{
+    background-color: $rosa;
+    color: $branco;
+    text-align: center;
+    .btn{
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+.assistant{
+    // background: url("../img/bg-assistant.jpg") no-repeat center center/cover;
+
+    .accordion{
+        margin-top: 40px;
+        h2{
+            font-family: "Oxygen";
+        }
+        ul{
+            list-style: none;
+        }
+    }
+
+    
+
+    .accordion-button{
+        background-color: rgba(255, 162, 191,.4);
+        color: #0a0a0a;
+        img{
+            max-width: 32px;
+            margin-right: 20px;
+            filter: invert(100%);
+        }
+    }
+
+    .accordion-body{
+        color: #0a0a0a
+    }
+}
+
+.cto2{
+    background: url("../img/cto2.jpg") no-repeat center center/cover;
+    color: $branco;
+    ul{
+        list-style: none;
+        li{
+            &::before{
+                content: "\27A4";
+                margin-right:10px;
+                color: $vermelho
+            }
+        }
+    }
+}
+
+.cursos{
+    .curso-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding:0 40px;
+        h2{
+            font-size: 1.75rem;
+            margin: 0 auto;
+            border-bottom: 2px solid $rosa;
+            width: fit-content;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.depoimentos{
+
+    .carousel-indicators{
+        margin-bottom: -1rem;
+    }
+
+    .carousel-inner{
+        width:80%; 
+        margin: 0 auto;
+        min-height: 260px;
+    }
+
+    .carousel-item.active{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-control-next, .carousel-control-prev{
+        width:initial;
+    }
+}
+
+.contato{
+    .img-contato{
+        width: 100%;
+    }
+}
+
+.social-networks{
+    text-align: center;
+}
+
+.main-footer{
+    padding: 40px 0;
+    text-align: center;
+    color: $branco;
+    background-color: #0a0a0a;
+}
