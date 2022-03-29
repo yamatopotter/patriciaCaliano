@@ -1,285 +1,159 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Oxygen:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Nunito:wght@400;700&display=swap");
 body {
-  font-family: "Oxygen", sans-serif;
-  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+}
+
+nav {
+  position: fixed !important;
+  width: 100%;
+}
+
+nav .navbar-brand img {
+  max-height: 65px;
+}
+
+nav .navbar-collapse {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
 }
 
 section {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Cormorant Garamond", serif;
+.title {
+  font-family: 'Alegreya SC', serif;
+  font-size: 3rem;
 }
 
-h1 {
-  font-size: 4rem;
-  margin-bottom: 40px;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.underscore-title::before {
-  content: "";
-  width: 30px;
-  height: 2px;
-  background-color: #FFA2BF;
-  display: inline-block;
-}
-
-.btn {
-  background-color: #cc0a05;
-  color: #efefef;
-  border-radius: 25px;
-  font-weight: bold;
+.title-intro {
+  font-size: 5rem;
+  line-height: 7rem;
   text-transform: uppercase;
-  padding: 10px 20px;
-  letter-spacing: 2px;
-}
-
-.btn:hover {
+  font-weight: 700;
+  letter-spacing: .5rem;
   color: #efefef;
-  background-color: #800603;
 }
 
-.btn-social {
-  opacity: 0.5;
-  padding: 5px;
+.card {
+  max-width: 300px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.link {
+  font-weight: bold;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-.btn-social:hover {
-  opacity: 1;
+.link .bi {
+  font-size: 1rem;
 }
 
-.main-header {
-  -webkit-box-shadow: 0px 0px 6px 0px #000000;
-  box-shadow: 0px 0px 6px 0px #000000;
+.link:hover {
+  color: #4ca2b9;
 }
 
-.main-header .navbar-collapse {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+.link.light-btn {
+  color: #d1d1d1;
 }
 
-.main-header .navbar-collapse .navbar-nav {
-  gap: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.link.light-btn:hover {
+  color: #efefef;
 }
 
-.main-header .btn-social img {
-  max-width: 20px;
+.link.big-btn {
+  font-size: 2rem;
+}
+
+.link.big-btn .bi {
+  font-size: 2rem;
+}
+
+@-webkit-keyframes introBackground {
+  from {
+    background-color: #0a0a0a;
+  }
+  to {
+    background-color: #4ca2b9;
+  }
+}
+
+@keyframes introBackground {
+  from {
+    background-color: #0a0a0a;
+  }
+  to {
+    background-color: #4ca2b9;
+  }
 }
 
 .intro {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/bg-intro.jpg") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-intro.jpg") no-repeat center center/cover;
-  color: #efefef;
-}
-
-.intro p {
-  margin-bottom: 20px;
-}
-
-.about-me .row {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #000;
+  -webkit-animation-name: introBackground;
+          animation-name: introBackground;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
-.about-me .profile-pic {
-  max-width: 100%;
-}
-
-.about-me p {
-  line-height: 1.75rem;
-}
-
-.about-me p:last-child {
-  font-weight: bold;
-}
-
-.cto1 {
-  background-color: #FFA2BF;
-  color: #efefef;
-  text-align: center;
-}
-
-.cto1 .btn {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.assistant {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/bg-assistant.jpg") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-assistant.jpg") no-repeat center center/cover;
-  color: #efefef;
-}
-
-.assistant .accordion {
-  margin-top: 40px;
-}
-
-.assistant .accordion h2 {
-  font-family: "Oxygen";
-}
-
-.assistant .accordion ul {
-  list-style: none;
-}
-
-.assistant .accordion-button {
-  background-color: rgba(255, 162, 191, 0.4);
-  color: #0a0a0a;
-}
-
-.assistant .accordion-button img {
-  max-width: 32px;
-  margin-right: 20px;
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-}
-
-.assistant .accordion-body {
-  color: #0a0a0a;
-}
-
-.cto2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/cto2.jpg") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cto2.jpg") no-repeat center center/cover;
-  color: #efefef;
-}
-
-.cto2 ul {
-  list-style: none;
-}
-
-.cto2 ul li::before {
-  content: "\27A4";
-  margin-right: 10px;
-  color: #cc0a05;
-}
-
-.cursos .curso-info {
+.services .services-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
-  padding: 0 40px;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
 }
 
-.cursos .curso-info h2 {
-  font-size: 1.75rem;
-  margin: 0 auto;
-  border-bottom: 2px solid #FFA2BF;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-bottom: 10px;
+.services .service-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0;
 }
 
-.depoimentos .carousel-indicators {
-  margin-bottom: -1rem;
-}
-
-.depoimentos .carousel-inner {
+.services .service-title::after {
+  content: '';
+  display: block;
+  height: 1px;
   width: 80%;
-  margin: 0 auto;
-  min-height: 260px;
-}
-
-.depoimentos .carousel-item.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.depoimentos .carousel-control-next,
-.depoimentos .carousel-control-prev {
-  width: initial;
-}
-
-.contato {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/bg-contato.jpg") no-repeat center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg-contato.jpg") no-repeat center center/cover;
-  color: #efefef;
-}
-
-.contato ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 40px;
-}
-
-.contato ul a {
-  color: #efefef;
-  font-weight: bold;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-}
-
-.contato ul a:hover {
-  border-bottom: 2px solid #cc0a05;
-}
-
-.contato ul img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 80px;
-  margin: 0 auto;
-}
-
-.social-networks {
-  text-align: center;
-}
-
-.social-networks ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 40px;
-}
-
-.social-networks ul img {
-  max-width: 80px;
-}
-
-.main-footer {
-  padding: 40px 0;
-  text-align: center;
-  color: #efefef;
   background-color: #0a0a0a;
+  margin: 10px auto;
+}
+
+.services .service-description {
+  padding: 0 10px;
+}
+
+.services .image-service {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+}
+
+.cta {
+  padding: 100px 0;
+  background-color: #e67e22;
 }
 /*# sourceMappingURL=style.css.map */

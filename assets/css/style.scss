@@ -1,262 +1,129 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Oxygen:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Nunito:wght@400;700&display=swap');
 
-// Variaveis de cores
-
-$branco: #efefef;
-$vermelho-escuro: #800603;
-$vermelho: #cc0a05;
-$rosa: #FFA2BF;
-
-body {
-    font-family: "Oxygen", sans-serif;
-    font-size: 18px;
+body{
+    font-family: 'Nunito', sans-serif;
 }
 
-section {
-    padding: 80px 0;
-}
-
-h1,
-h2,
-h3 {
-    font-family: "Cormorant Garamond", serif;
-}
-
-h1 {
-    font-size: 4rem;
-    margin-bottom: 40px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.underscore-title::before {
-    content: "";
-    width: 30px;
-    height: 2px;
-    background-color: $rosa;
-    display: inline-block;
-}
-
-.btn {
-    background-color: $vermelho;
-    color: $branco;
-    border-radius: 25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    letter-spacing: 2px;
-
-    &:hover {
-        color: $branco;
-        background-color: $vermelho-escuro;
-    }
-}
-
-.btn-social {
-    opacity: 0.5;
-    padding:5px;
-    transition: .3s ease-in-out;
-    &:hover {
-        opacity: 1;
-    }
-}
-
-.main-header {
-    -webkit-box-shadow: 0px 0px 6px 0px #000000;
-    box-shadow: 0px 0px 6px 0px #000000;
-
-    .navbar-collapse {
-        justify-content: end;
-
-        .navbar-nav {
-            gap: 20px;
-            align-items: center;
-        }
-    }
-
-    .btn-social {
-        img {
-            max-width: 20px;
-        }
-    }
-}
-
-.intro {
-    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.5)) , url('../img/bg-intro.jpg') no-repeat center center/cover;
-    color: $branco;
-
-    p {
-        margin-bottom: 20px;
-    }
-}
-
-.about-me {
-
-    .row {
-        align-items: center;
-    }
-
-    .profile-pic {
-        max-width: 100%;
-    }
-
-    p {
-        line-height: 1.75rem;
-
-        &:last-child {
-            font-weight: bold;
-        }
-    }
-}
-
-.cto1 {
-    background-color: $rosa;
-    color: $branco;
-    text-align: center;
-
-    .btn {
-        width: fit-content;
-        margin: 0 auto;
-    }
-}
-
-.assistant {
-    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.5)), url("../img/bg-assistant.jpg") no-repeat center center/cover;
-    color: $branco;
-
-    .accordion {
-        margin-top: 40px;
-
-        h2 {
-            font-family: "Oxygen";
-        }
-
-        ul {
-            list-style: none;
-        }
-    }
-
-
-
-    .accordion-button {
-        background-color: rgba(255, 162, 191, .4);
-        color: #0a0a0a;
-
-        img {
-            max-width: 32px;
-            margin-right: 20px;
-            filter: invert(100%);
-        }
-    }
-
-    .accordion-body {
-        color: #0a0a0a
-    }
-}
-
-.cto2 {
-    background: linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.5)), url("../img/cto2.jpg") no-repeat center center/cover;
-    color: $branco;
-
-    ul {
-        list-style: none;
-
-        li {
-            &::before {
-                content: "\27A4";
-                margin-right: 10px;
-                color: $vermelho
-            }
-        }
-    }
-}
-
-.cursos {
-    .curso-info {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 20px;
-        padding: 0 40px;
-
-        h2 {
-            font-size: 1.75rem;
-            margin: 0 auto;
-            border-bottom: 2px solid $rosa;
-            width: fit-content;
-            padding-bottom: 10px;
-        }
-    }
-}
-
-.depoimentos {
-
-    .carousel-indicators {
-        margin-bottom: -1rem;
-    }
-
-    .carousel-inner {
-        width: 80%;
-        margin: 0 auto;
-        min-height: 260px;
-    }
-
-    .carousel-item.active {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .carousel-control-next,
-    .carousel-control-prev {
-        width: initial;
-    }
-}
-
-.contato {
-    background:linear-gradient(rgba(0,0,0, .5), rgba(0,0,0,.5)), url("../img/bg-contato.jpg") no-repeat center center/cover;
-    color:$branco;
-    ul{
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        a{
-            color: $branco;
-            font-weight: bold;
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: .3s ease-in-out;
-            &:hover{
-                border-bottom: 2px solid $vermelho;
-            }
-        }
+nav{
+    position: fixed !important;
+    width: 100%;
+    .navbar-brand{
         img{
-            display: flex;
-            max-width: 80px;
-            margin: 0 auto;
+            max-height: 65px;
         }
+    }
+    .navbar-collapse{
+        flex-grow: 0;
     }
 }
 
-.social-networks {
-    text-align: center;
-    ul{
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        img{
-            max-width: 80px;
-        }
-    }
-}
-
-.main-footer {
+section{
     padding: 40px 0;
-    text-align: center;
-    color: $branco;
-    background-color: #0a0a0a;
+}
+
+.title{
+    font-family: 'Alegreya SC', serif;
+    font-size: 3rem;
+}
+
+.title-intro{
+    font-size: 5rem;
+    line-height: 7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .5rem;
+    color: #efefef;
+}
+
+.card{
+    max-width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 0;
+    border-radius: 10px;
+}
+
+.link{
+    font-weight: bold;
+    transition: .3s ease-in-out;
+    .bi{
+        font-size: 1rem;
+        
+    }
+    &:hover{
+        color: #4ca2b9;
+    }
+    &.light-btn{
+        color: #d1d1d1;
+        &:hover{
+            color: #efefef;
+        }
+    }
+    &.big-btn{
+        font-size: 2rem;
+        .bi{
+            font-size: 2rem;
+        }
+    }
+}
+// ------------------------- Animations --------------------------------------
+
+@keyframes introBackground {
+    from{
+        background-color: #0a0a0a;
+    }
+    to{
+        background-color: #4ca2b9;
+    }
+  }
+
+// ------------------------- Página Inicial ----------------------------------
+
+.intro{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #000;
+    animation-name: introBackground;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.services{
+    .services-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:20px;
+    }
+    .service-title{
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 10px;
+        margin: 0;
+        &::after{
+            content: '';
+            display: block;
+            height:1px;
+            width: 80%;
+            background-color: #0a0a0a;
+            margin: 10px auto;
+        }
+    }
+
+    .service-description{
+        padding: 0 10px;
+    }
+
+    .image-service{
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 10px;
+    }
+}
+
+.cta{
+    padding: 100px 0;
+    background-color: #e67e22;
 }

@@ -5,33 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
-    <title>Patricia Caliano - Seu novo eu começa aqui</title>
+
+    <title>Patricia Caliano</title>
 </head>
 
 <body>
-    <header class="main-header">
-        <nav class="navbar navbar-expand-lg">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand"><img src="assets/img/logo.png"
-                        alt="Logo da Patrícia Caliano"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/logo.png" alt="Logo Patricia Caliano">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li><a href="#">Quem sou eu?</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Depomentos</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="" class="btn-social"><img src="./assets/img/insta-red.png"></a></li>
-                        <li><a href="" class="btn-social"><img src="./assets/img/fb-red.png"></a></li>
-                        <li><a href="" class="btn-social"><img src="./assets/img/youtube.png"></a></li>
-                        <li><a href="#" class="btn">Agendar Consulta</a></li>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -40,339 +41,100 @@
 
     <main>
         <section class="intro">
+
             <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-6 align-left">
-                        <h1>Um convite para começar sua melhor vida!</h1>
-                        <p>Saiba como posso ajudar no seu crescimento pessoal e profissional!</p>
-                        <a href="#" class="btn">Descubra</a>
-                    </div>
+                <div class="col-6">
+
+                    <h1 class="title-intro">Já pensou em você hoje?</h1>
+                    <a href="#" class="btn btn-outline-info">Teste</a>
                 </div>
             </div>
+
         </section>
 
         <section class="about-me">
             <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="assets/img/patricia1.png" alt="Foto de perfil de Patricia Caliano"
-                            class="profile-pic">
-                    </div>
+                <h1 class="title">Patricia Caliano</h1>
 
-                    <div class="col-8 description">
-                        <h1 class="underscore-title">Quem sou eu?</h1>
-
-                        <p>Sou psicóloga com formação em Terapia Cognitivo Comportamental e Terapia do Esquema, pós
-                            graduação em Saúde Mental e especialização em Psicopedagogia. Também sou Life e Positive
-                            Coach. Atendendo cada cliente de forma personalizada seja em atendimento psicológico ou
-                            processo de Coaching e Mentoria, consigo atingir com eles resultados transformadores.</p>
-
-                        <p>No âmbito clínico a formação em Terapia Cognitivo Comportamental (TCC) e em Terapia do
-                            Esquema me aproximou da questão crucial de curar os Esquemas desadaptativos, desenvolvidos
-                            na infância e ressignificar a interpretação dos eventos externos como condições essenciais
-                            para a felicidade e bem estar!</p>
-
-                        <p>A formação em Coaching solidificou minha grande missão e propósito de vida: transformar
-                            pessoas na melhor versão de si mesmas, através da resolução de conflitos do passado, no
-                            amadurecimento comportamentale no desenvolvimento de inteligência emocional! Tal
-                            transformação acontece em paralelo com o encontro do grande amor da vida: o amor próprio!
-                        </p>
-
-                        <p>A partir da conquista de saúde mental e emocional conseguimos atingir a vida dos sonhos e
-                            torná-la real: uma vida UAU !</p>
-
-                        <p>Vamos juntos?</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cto1">
-            <div class="container">
-                <div class="row">
-                    <h1>Faça o agendamento da sua consulta online!</h1>
-
-                    <a href="#" class="btn">
-                        Agendar Consulta
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="assistant">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="underscore-title">Como posso te ajudar?</h1>
-                        <p>Conheça a ajuda especializada que vai alavancar sua carreira e vida profissional!</p>
-                    </div>
-
-                    <div class="col-8 mx-auto">
-                        <div class="accordion" id="accordionService">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="serviceOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#descriptionOne" aria-expanded="true" aria-controls="descriptionOne">
-                                        <img class="service-icon" src="./assets/img/terapia.png"> Terapia do Esquema / Cognitivo Comportamental
-                                    </button>
-                                  </h2>
-
-                                  <div id="descriptionOne" class="accordion-collapse collapse" aria-labelledby="serviceOne" data-bs-parent="#accordionService">
-                                    <article class="accordion-body service-description">
-                                        <p>Como Psicóloga, ajudo pessoas com dificuldades de lidar com emoções e relacionamentos ou insucessos em diversas áreas da vida a encontrarem seu ponto de equilíbrio, promovendo mudanças emocionais e comportamentais duradouras. Muitas vezes são as distorções na interpretação de acontecimentos externos que geram comportamentos disfuncionais na vida e através da Psicoterapia, ajudo as pessoas a encontrarem seu ponto de equilíbrio, promovendo mudanças emocionais e comportamentais duradouras.</p><p>A infância e adolescência, vividas em famílias disfuncionais, podem ser conturbadas e traumáticas. As experiências infantis continuadas, decorrentes das necessidades infantis (amor, proteção, empatia) não atendidas pelos cuidadores (família de origem), durante o desenvolvimento da personalidade, geram Esquemas Desadaptativos Iniciais e crenças disfuncionais ligadas à esses esquemas. Essas sequelas psicológicas podem gerar padrões derrotistas que vão se repetindo na vida adulta, gerando comportamentos disfuncionais decorrentes do esquema, trazendo prejuízos, infelicidade e sofrimento em diversas áreas da vida. A terapia do Esquema é uma modalidade avançada da Terapia Cognitivo- Comportamental e através dela ajudamos o paciente a identificar suas vulnerabilidades, suas necessidades emocionais não atendidas na infância e seus modus operandi que perpetua o sofrimento, sendo conduzido e estimulado através do processo terapêutico a abdicar dos estilos infantis que trazem prejuízos e adotar respostas mais adultas e saudáveis que tragam ganhos para uma vida significativa e feliz.</p>
-                                    </article>
-                                  </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="serviceTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#descriptionTwo" aria-expanded="true" aria-controls="descriptionTwo">
-                                        <img class="service-icon" src="./assets/img/mentoria-relacionamento.png"> Mentoria de Relacionamento
-                                    </button>
-                                  </h2>
-
-                                  <div id="descriptionTwo" class="accordion-collapse collapse" aria-labelledby="serviceTwo" data-bs-parent="#accordionService">
-                                    <article class="accordion-body service-description">
-                                        <p>Formas disfuncionais de se relacionar tem, muitas vezes origem numa aprendizagem da infância, que se infiltram na vida adulta, provocando prejuízos na área amorosa.</p><p>Como psicóloga, coach e mentora, ajudo mulheres a se conscientizarem dos erros que cometem na fase da conquista e dos padrões derrotistas que incorporaram, treinando suas habilidades sociais e desenvolvendo-as para agir de forma sensata e madura, aprendendo a se valorizar, conseguindo assim atrair o homem certo para um relacionamento comprometido e de qualidade.</p>
-                                    </article>
-                                  </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="serviceThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#descriptionThree" aria-expanded="true" aria-controls="descriptionThree">
-                                        <img class="service-icon" src="./assets/img/coaching-carreira.png">Coaching de Carreira
-                                    </button>
-                                  </h2>
-
-                                  <div id="descriptionThree" class="accordion-collapse collapse" aria-labelledby="serviceThree" data-bs-parent="#accordionService">
-                                    <article class="accordion-body service-description">
-                                        <p>Através do aumento do foco e da produtividade e do estabelecimento de objetivos profissionais, ajudo clientes a trabalharem de forma mais assertiva, melhorando suas relações de trabalho, desenvolvendo mais competências e maiores atributos de liderança para saírem da situação atual para a desejada.</p><h3>Processo de Coaching</h3><p>Como coach, com formação em Psicologia, eu trabalho quebrando padrões sabotadores e derrotistas, desafiando indivíduos que queiram melhorar suas vidas e atingir seu potencial pleno, elevando seu desempenho das áreas de carreira, emagrecimento/imagem corporal e relacionamento. A sua vida pode ser esplêndida se você não se conformar em ser banal! A escolha entre o sucesso ou o fracasso está nas suas mãos!</p><p>Pessoas que de beneficiam do Coaching são mais ousadas, seguras, empreendedoras e com altos níveis de satisfação pessoal e realização na vida.</p><ul><li>- Ok Patricia, mas o que é Coaching?</li><li><b>É a arte de aumentar a performance dos clientes.</b></li><li><b>É o trabalho para trazer à tona a excelência das pessoas.</b></li><li><b>É a construção e potencialização do poder pessoal.</b></li></ul><p>O Coaching traz autoconhecimento, autoestima e autoconfiança para você tornar os seus sonhos reais!</p><p>Duração: de 12 à 18 sessões</p>
-                                    </article>
-                                  </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="serviceFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#descriptionFour" aria-expanded="true" aria-controls="descriptionFour">
-                                        <img class="service-icon" src="./assets/img/coaching-emagrecimento.png">Coaching de Emagrecimento
-                                    </button>
-                                  </h2>
-
-                                  <div id="descriptionFour" class="accordion-collapse collapse" aria-labelledby="serviceFour" data-bs-parent="#accordionService">
-                                    <article class="accordion-body service-description">
-                                        <p>Através da conscientização dos padrões alimentares disfuncionais, mapeando as emoções envolvidas na compulsão alimentar, ajudo as clientes a desenvolver disciplina e através de desafios semanais, transformar a relação com o alimento e superar a batalha contra os impulsos de comer, emagrecendo em consequência.</p><h3>Processo de Coaching</h3><p>Como coach, com formação em Psicologia, eu trabalho quebrando padrões sabotadores e derrotistas, desafiando indivíduos que queiram melhorar suas vidas e atingir seu potencial pleno, elevando seu desempenho das áreas de carreira, emagrecimento/imagem corporal e relacionamento. A sua vida pode ser esplêndida se você não se conformar em ser banal! A escolha entre o sucesso ou o fracasso está nas suas mãos!</p><p>Pessoas que de beneficiam do Coaching são mais ousadas, seguras, empreendedoras e com altos níveis de satisfação pessoal e realização na vida.</p>        <ul><li>- Ok Patricia, mas o que é Coaching?</li><li><b>É a arte de aumentar a performance dos clientes.</b></li><li><b>É o trabalho para trazer à tona a excelência das pessoas.</b></li><li><b>É a construção e potencialização do poder pessoal.</b></li></ul><p>O Coaching traz autoconhecimento, autoestima e autoconfiança para você tornar os seus sonhos reais!</p><p>Duração: de 12 à 18 sessões</p>
-                                    </article>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cursos">
-            <div class="container">
-                <div class="row">
-                    <h1 class="underscore-title">Cursos & Workshops</h1>
-
-                    <div class="curso-info col-6">
-                        <h2>Jornada da Autoconfiança</h2>
-                        <p>Curso online me grupo em 4 sessões composto de técnicas e ferramentas para
-                            desenvolvimento da autoconfiança.</p>
-                    </div>
-
-                    <div class="curso-info col-6">
-                        <h2>Workshop Splendid</h2>
-                        <p>A tríade do sucesso feminino: workshop vivencial para desenvolver os 3 pilares do sucesso
-                            feminino- relacionamento, forma física e carreira.</p>
-                    </div>
-
-                    <div class="curso-info col-6">
-                        <h2>Método MEV</h2>
-                        <p>Mentoria de relacionamento para desenvolvimento de comportamentos funcionais e assertivos
-                            femininos, de modo a que a mulher consiga estabelecer e manter um relacionamento de
-                            qualidade. Método aplicado em 5,8 ou 10 sessões. </p>
-                    </div>
-                    <div class="curso-info col-6">
-                        <h2>Desafio da mulher Envolvente</h2>
-                        <p>Desafio diário em grupo de Whatsapp e Telegram que atráves de atividades, tarefas e
-                            reflexões diárias.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cto2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-7">
-                        <h1>Mentoria Sucesso no Amor
-                            (em grupo)</h1>
-
-                        <p>Nesse Programa de treinamento completo, inovador e inédito você vai ter:
-                            <ul>
-                                <li>24 aulas-treinamento sobre como ser uma MULHER ENVOLVENTE!</li>
-                                <li>6 Mentorias comigo em grupo para resolver seus problemas em relacionamento</li>
-                                <li>2 treinamentos online de Habilidades sociais</li>
-                                <li>1 treinamento de Autoconfiança</li>
-                                <li>Um grupo de Whatsapp para interagir com o grupo durante 180 dias e encontrar
-                                    soluções!</li>
-                            </ul>
-                        </p>
-
-                        <p>Todo esse pacote de transformação por um preço que você pode pagar!</p>
-
-                        <a class="btn" href="#">quero saber mais</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="depoimentos">
-            <div class="container">
-                <div class="row">
-                    <h1 class="underscore-title">Depoimentos</h1>
-
-                    <div id="carrosselDepoimentos" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                        
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Depoimento 1"></button>
-                            <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="1" aria-label="Depoimento 2"></button>
-                            <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="2" aria-label="Depoimento 3"></button>
-                            <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="3" aria-label="Depoimento 4"></button>
-                            <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="4" aria-label="Depoimento 5"></button>
-                            <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="5" aria-label="Depoimento 6"></button>
-                            <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="6" aria-label="Depoimento 7"></button>
-                            <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="7" aria-label="Depoimento 8"></button>
-                            <button type="button" data-bs-target="#carrosselDepoimentos" data-bs-slide-to="8" aria-label="Depoimento 9"></button>
-                          </div>
-
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <h2>Silvana Menezes - Gerente Comercial do Varejo de Luxo</h2>
-                                <p>Antes do Coaching minha vida profissional estava estagnada. Eu não tinha muita
-                                    convicção do que queria nem percepção dos meus talentos e forças. Através do
-                                    Processo de Coaching fui melhorando minha liderança e ganhando autoconfiança para
-                                    fazer as ações necessárias para atingir meus objetivos profissionais! Durante o
-                                    processo recebi uma proposta irrecusável de uma multinacional do varejo de luxo para
-                                    a gestão da filial do Rio, triplicando os meus ganhos. Através de ferramentas do
-                                    Coaching, vi que era a opção que me traria mais benefícios e fiz a transição. Hoje
-                                    tenho uma vida profissional plena e sou segura da minha da liderança. Estou
-                                    consciente da excelente gestora que sou pois a Patricia me ensinou que quando
-                                    entramos em ação direcionada para o que queremos, o universo nos presenteia!</p>
-                            </div>
-                            <div class="carousel-item">
-                                <h2>Bruna Tostes - Gerente Comercial de Varejo</h2>
-                                <p>Minha vida antes do Coaching era básica e por dentro eu sentia que faltava algo.
-                                    Sentia que precisava me encontrar, ou melhor, me desvendar. O Coaching é exatamente
-                                    isso, desvendar o seu íntimo e trazer à tona os seus defeitos, mas não com
-                                    julgamento e sim para encará-los e saber suas forças. Há exatos 2 anos fiz o
-                                    Coaching e minha vida obteve um solavanco surreal. Patricia, muito obrigada pela sua
-                                    dedicação comigo! Por me ensinar que eu sou capaz de fazer tudo o que eu quiser. Em
-                                    2017 eu concluí vários sonhos que estavam no papel e isso prosseguiu em 2018 e 2019.
-                                    Hoje sou capaz de realizar os objetivos que traço para mim!</p>
-                            </div>
-                            <div class="carousel-item">
-                                <h2>Rodrigo Estevez- Vestibulando</h2>
-                                <p>A princípio eu procurei o Coaching apenas com o objetivo de escolher qual carreira
-                                    seguir mas descobri muito mais que isso. Antes do processo eu não tinha muita
-                                    organização na minha rotina e me sentia perdido. Conforme fui fazendo as sessões com
-                                    a Patricia, descobri não só as áreas em que poderia seguir na faculdade e minhas
-                                    vocações mas também meus sabotadores, minhas habilidades e como utilizá-las para o
-                                    meu bem. O Coaching me fez acreditar mais em mim, potencializar minhas forças e,
-                                    mesmo que ainda não tenha alcançado meu objetivo, sei que posso aprender com os
-                                    erros, seguir melhorando e nunca desistir! Só tenho a agradecer à Patricia por todo
-                                    o processo! </p>
-                            </div>
-
-                            <div class="carousel-item">
-                                <h2>Dr. Claúdio Lins - Cirurgião-Dentista</h2>
-                                <p>Falar da profissional Patricia Caliano é muito simples pois esta é a sua base, ser gente como a gente! Ela, com sua experiência, maturidade, bom humor e assertividade, me apresentou o Processo de Coaching e me ajudou a reconhecer o meu potencial, a valorizar o que realmente deve ser valorizado, a nutrir a autoestima e o resultado foi um empoderamento tão grande que em duas semanas mudamos o foco para novos desafios no meu lado profissional. Sua expertise é macro. Podemos iniciar um processo focado no lado emocional, mas a vida é sistêmica e bem-estar inclui autoestima, realização profissional e cuidados com o corpo. Patricia comanda muio bem em qualquer dessas vertentes. Sou grato por todos os puxões de orelha, apoios e melhorias! Patricia Caliano: guardem esse nome. Ainda iremos ouvir falar muito!</p>
-                            </div>
-
-                            <div class="carousel-item">
-                                <h2>Roberta Lourenço - Diretora Comercial</h2>
-                                <p>Comecei o Coaching em meados de 2017 e passados 2 anos vejo como mudou a minha vida. Com a ruptura surgida por uma mudança de cidade, comecei um processo de transformação estética e emocional. Fui aos poucos me sentindo mais motivada, mais segura, mais forte e preparada para a vida! Aprendi a ter a vida acelerada sem me acelerar. O Coaching ocorreu no momento certo e me ajudou muito. Na próxima semana estarei abrindo a oficina que projetei durante as sessões. Estou sem medo e preparada para o que vier! Aprendi com o Coaching que sempre posso recomeçar!</p>
-                            </div>
-
-                            <div class="carousel-item">
-                                <h2>Joanna Gomes - Supervisora Comercial</h2>
-                                <p>Busquei o Coaching porque queria ter mais resultados nas metas da empresa. Senti que precisava de algo mais, já que as atitudes que eu tomava não estavam dando o resultado planejado e eu estava insatisfeita. Foi quando mandei uma mensagem para a Patricia com os dizeres: “Preciso de você na minha vida!” e tudo começou. Senti que a partir dali surgiu uma nova Joanna. Com os desafios da Patricia, mudei posturas, atitudes e os resultados foram chegando. Durante o processo, houve uma mudança em meus rumos profissionais e eu sei que a atitude da antiga Joanna seria desistir, mas fomos adiante e traçamos novos objetivos e metas de vida. Hoje estou exatamente onde planejei! Obrigada, Patricia!</p>
-                            </div>
-
-                            <div class="carousel-item">
-                                <h2>Patricia Rebouças - Funcionária pública</h2>
-                                <p>O Processo de Coaching com Patricia Caliano foi muito importante para mim! Pude me autoconhecer e resolver questões muito importantes, como a disciplina, parar de procrastinar, conhecer meus sentimentos e perceber como eu estava agindo em relação à alimentação, descontando muitas vezes meus sentimentos e emoções na comida. Com as ferramentas que ela usou no Processo de Coaching eu desenvolvi: disciplina, performance, equilíbrio e isso me ajudou não só a emagrecer 8kg (meu objetivo) como a gerir melhor a minha vida em outras áreas como atividade física, estudo e trabalho. Meu corpo atual me deixa muito feliz e realizada, junto com as outras conquistas que tive!</p>
-                            </div>
-
-                            <div class="carousel-item">
-                                <h2>Ellen Sanchez - Psicóloga</h2>
-                                <p>Venho dar meu depoimento como uma declaração de gratidão. Nos últimos meses de 2018 (mais precisamente no dia 27 de agosto) iniciamos o meu projeto de emagrecimento através do Processo de Coaching de Emagrecimento Get Slim, criado pela Patricia Caliano. A partir daí tivemos sessões maravilhosas de enfrentamento, puxões de orelha, descobertas e conquistas juntas! Eu e minha coach tivemos uma bela evolução nesse processo. Emagreci 13kg em 3 meses de dedicação e tenho uma vida inteira pela frente! Tenho apenas 28 anos e sei que ainda há muito por vir. A busca de minha melhor versão apenas começou e só tenho a agradecer!</p>
-                            </div>
-
-                            <div class="carousel-item">
-                                <h2>Maria José - Funcionária Pública</h2>
-                                <p>Vivenciei uma experiência exitosa com a ajuda da coach Patricia Caliano. Muito além de um programa de emagrecimento, mas uma construção de auto conhecimento que me oportunizou um auto controle e auto cuidado que refletiram diretamente na minha mudança de atitude e organização mental. O emagrecimento, a elevação da auto estima e confiança foram consequências naturais que se mantêm no meu cotidiano. Obrigada Patricia, pela parceria e direcionamento. Sucesso total!</p>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDepoimentos"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carrosselDepoimentos"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="contato">
-            <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h1 class="underscore-title">Contato</h1>
-                        <p>Se quiser falar comigo sobre sessões de Psicoterapia, Coaching, Workshops ou Treinamentos,
-                            agende uma conversa comigo pelo whatsapp ou enviando um email.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nihil delectus commodi beatae quia! Temporibus voluptatibus saepe corporis sequi a officiis illo quos unde, ex repellendus qui dolores voluptatum dolore fugiat id molestiae vero ab. Nemo maxime quisquam magni obcaecati eum ipsa neque nostrum! Aspernatur voluptatem sunt velit laborum perferendis.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sequi expedita ut dolorum quasi omnis beatae eum repudiandae asperiores sapiente, architecto, sunt quae. Magnam, eius? Numquam vel alias a obcaecati quo sequi nihil. Itaque quos, blanditiis aspernatur quisquam, natus tenetur vitae eaque provident inventore ea nesciunt? Molestiae placeat doloremque incidunt.</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sequi expedita ut dolorum quasi omnis beatae eum repudiandae asperiores sapiente, architecto, sunt quae. Magnam, eius? Numquam vel alias a obcaecati quo sequi nihil. Itaque quos, blanditiis aspernatur quisquam, natus tenetur vitae eaque provident inventore ea nesciunt? Molestiae placeat doloremque incidunt.</p>
+                    </div>
+                </div>
 
-                        <ul>
-                            <li>
-                                
-                                <a href="#"><img class="icon-contato" src="./assets/img/whatsapp.png">Whatsapp:(21) 97949-3369</a>
-                            </li>
+            </div>
+        </section>
 
-                            <li>
-                                
-                                <a href="mailto:contato@patriciacaliano.com.br"><img class="icon-contato" src="./assets/img/mail.png">contato@patriciacaliano.com.br</a>
-                            </li>
-                        </ul>
+        <section class="services">
+            <div class="container">
+                <h1 class="title">Serviços</h1>
+                <p>Conheça algumas maneiras com que posso te ajudar</p>
+
+                <div class="row services-list">
+                    <div class="card">
+                        <img src="./assets/img/service.gif" alt="" class="image-service">
+                        <span class="service-title">Lorem, ipsum dolor.</span>
+                        <p class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
+
+                        <a href="#" class="btn link">Saiba Mais <i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="./assets/img/service.gif" alt="" class="image-service">
+                        <span class="service-title">Lorem, ipsum dolor.</span>
+                        <p class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
+
+                        <a href="#" class="btn link">Saiba Mais <i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="./assets/img/service.gif" alt="" class="image-service">
+                        <span class="service-title">Lorem, ipsum dolor.</span>
+                        <p class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
+
+                        <a href="#" class="btn link">Saiba Mais <i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+
+                    <div class="card">
+                        <img src="./assets/img/service.gif" alt="" class="image-service">
+                        <span class="service-title">Lorem, ipsum dolor.</span>
+                        <p class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
+                        <a href="#" class="btn link">Saiba Mais <i class="bi bi-arrow-right-short"></i></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="social-networks">
-            <div class="container-fluid">
-                <h1>Siga-me nas redes sociais</h1>
+        <section class="cta">
 
-                <ul>
-                    <li><a href="#" class="btn-social"><img src="./assets/img/insta-red.png"></a></li>
-                    <li><a href="#" class="btn-social"><img src="./assets/img/fb-red.png"></a></li>
-                    <li><a href="#" class="btn-social"><img src="./assets/img/youtube.png"></a></li>
-                </ul>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-6">
+    
+                        <h1 class="title-intro">Mentoria ou Terapia</h1>
+    
+                    </div>
+    
+                    <div class="col-6">
+                        <p>Está na dúvida se precisa de uma mentoria ou teriapia? Não tem problema, para te ajudar nessa escolha, preparei um questionário com algumas perguntas para realizarmos essa avaliação. O questionário é rápido, então, o que está esperando?</p>
+
+                        <a href="#" class="btn link light-btn big-btn">Realizar teste agora <i class="bi bi-arrow-right-short"></i></a>
+                    </div>
+
+                </div>
             </div>
+           
         </section>
     </main>
 
-    <footer class="main-footer">
-        <p>© Copyright 2022 Patricia Caliano - Todos os direitos reservados | Patricia C. Caliano - CRP 05/15309</p>
+    <footer>
+
     </footer>
 
-    <script src="./assets/js/dadosAjuda.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>
