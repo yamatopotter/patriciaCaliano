@@ -1,32 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Nunito:wght@400;700&display=swap');
 
-body{
+$dark-blue: #13175E;
+$dark-magenta: #731436;
+
+body {
     font-family: 'Nunito', sans-serif;
+    color: $dark-blue;
 }
 
-nav{
+nav {
     position: fixed !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 100%;
-    .navbar-brand{
-        img{
+    z-index: 9999;
+
+    .navbar-brand {
+        img {
             max-height: 65px;
         }
     }
-    .navbar-collapse{
+
+    .navbar-collapse {
         flex-grow: 0;
     }
 }
 
-section{
+section {
     padding: 40px 0;
 }
 
-.title{
+.title {
     font-family: 'Alegreya SC', serif;
     font-size: 3rem;
 }
 
-.title-intro{
+.title-intro {
     font-size: 5rem;
     line-height: 7rem;
     text-transform: uppercase;
@@ -35,50 +43,109 @@ section{
     color: #efefef;
 }
 
-.card{
-    max-width: 300px;
+.card {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 0;
     border-radius: 10px;
 }
 
-.link{
+.link {
     font-weight: bold;
     transition: .3s ease-in-out;
-    .bi{
+
+    .bi {
         font-size: 1rem;
-        
+
     }
-    &:hover{
+
+    &:hover {
         color: #4ca2b9;
     }
-    &.light-btn{
+
+    &.light-btn {
         color: #d1d1d1;
-        &:hover{
+
+        &:hover {
             color: #efefef;
         }
     }
-    &.big-btn{
+
+    &.big-btn {
         font-size: 2rem;
-        .bi{
+
+        .bi {
             font-size: 2rem;
         }
     }
 }
+
+.btn{
+    &.line-btn{
+        &:after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 1px;
+            margin: 0 auto;
+            transition: .3s ease-in-out;
+        }
+    
+        &:hover::after {
+            width: 100%;
+        }
+    }
+}
+
+.card-list {
+    justify-content: center;
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-image {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 10px;
+    }
+
+    .card-title {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0 10px;
+        margin: 0;
+
+        &::after {
+            content: '';
+            display: block;
+            height: 1px;
+            width: 80%;
+            background-color: #0a0a0a;
+            margin: 10px auto;
+        }
+    }
+
+    .card-description {
+        padding: 0 10px;
+    }
+}
+
 // ------------------------- Animations --------------------------------------
 
 @keyframes introBackground {
-    from{
+    from {
         background-color: #0a0a0a;
     }
-    to{
+
+    to {
         background-color: #4ca2b9;
     }
-  }
+}
 
 // ------------------------- Página Inicial ----------------------------------
 
-.intro{
+.intro {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -89,41 +156,109 @@ section{
     animation-iteration-count: infinite;
 }
 
-.services{
-    .services-list{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap:20px;
-    }
-    .service-title{
-        font-weight: bold;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 0 10px;
-        margin: 0;
-        &::after{
-            content: '';
-            display: block;
-            height:1px;
-            width: 80%;
-            background-color: #0a0a0a;
-            margin: 10px auto;
+.cta {
+    padding: 100px 0;
+    background-color: #e67e22;
+}
+
+.instagram{
+    .btn{
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: .3s ease-in-out;
+        &.line-btn:after {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
         }
-    }
-
-    .service-description{
-        padding: 0 10px;
-    }
-
-    .image-service{
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-        margin-bottom: 10px;
     }
 }
 
-.cta{
-    padding: 100px 0;
-    background-color: #e67e22;
+.blog {
+    .card {
+        box-shadow: rgba(224, 80, 130, 0.3) 0px 1px 4px;
+        border: 0;
+
+        .card-title {
+            margin-top: 20px;
+            font-family: 'Alegreya SC', serif;
+        }
+    }
+    .line-btn{
+        width: fit-content;
+        &:after{
+            background-color: $dark-blue;
+        }
+    }
+}
+
+.contact {
+    .btn {
+        font-size: 1.5rem;
+        transition: .3s ease-in-out;
+        i {
+            margin-right: 10px;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+        }
+
+        &.whatsapp:hover {
+            color: #3fc380
+        }
+
+        &.whatsapp:hover::after {
+            width: 100%;
+            background-color: #3fc380;
+        }
+
+        &.email:hover {
+            color: #f9b42d;
+        }
+
+        &.email:hover::after {
+            width: 100%;
+            background-color: #f9b42d;
+        }
+    }
+}
+
+.social-media
+{
+    ul{
+        font-size: 3rem;
+        list-style: none;
+        display: flex;
+        gap:20px;
+        justify-content: center;
+        a{
+            padding: 10px;
+            color: $dark-magenta;
+            opacity: .4;
+            transition: .3s ease-in-out;
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+    }
+}
+
+footer{
+    text-align: center;
+    background-color: $dark-blue;
+    color: #efefef;
+    padding:20px 0;
+    p{
+        margin: 0;
+        padding: 0;
+    }
 }
