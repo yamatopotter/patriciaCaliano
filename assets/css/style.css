@@ -130,39 +130,37 @@ section {
 
 @-webkit-keyframes introBackground {
   from {
-    background-color: #0a0a0a;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/bg.jpg") no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.jpg") no-repeat center center/cover;
   }
   to {
-    background-color: #4ca2b9;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 54, 148, 0.5)), to(rgba(150, 54, 148, 0.5))), url("../img/bg.jpg") no-repeat center center/cover;
+    background: linear-gradient(rgba(150, 54, 148, 0.5), rgba(150, 54, 148, 0.5)), url("../img/bg.jpg") no-repeat center center/cover;
   }
 }
 
 @keyframes introBackground {
   from {
-    background-color: #0a0a0a;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/bg.jpg") no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.jpg") no-repeat center center/cover;
   }
   to {
-    background-color: #4ca2b9;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 54, 148, 0.5)), to(rgba(150, 54, 148, 0.5))), url("../img/bg.jpg") no-repeat center center/cover;
+    background: linear-gradient(rgba(150, 54, 148, 0.5), rgba(150, 54, 148, 0.5)), url("../img/bg.jpg") no-repeat center center/cover;
   }
 }
 
 .intro {
-  height: 100vh;
+  padding: 80px 0;
+  padding-top: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #000;
-  -webkit-animation-name: introBackground;
-          animation-name: introBackground;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(150, 54, 148, 0.5)), to(rgba(150, 54, 148, 0.5))), url("../img/bg.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(150, 54, 148, 0.5), rgba(150, 54, 148, 0.5)), url("../img/bg.jpg") no-repeat center center/cover;
 }
 
 .cta {
