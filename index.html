@@ -1,310 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- css -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap-icons.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <title>Patricia Caliano</title>
-</head>
-
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./assets/img/logo.png" alt="Logo Patricia Caliano">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
                 </a>
-            
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="intro">
+      <section id="intro">
+        <div class="container">
+          <div class="row">
+            <img src="https://placehold.co/100x100" />
+            <h1>Um convite para comear sua melhor vida!</h1>
+            <p>
+              saiba como posso ajudar no seu crescimento pessoal e profissional
+            </p>
+            <a href="#" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+      </section>
 
-            <div class="container">
-                <div class="col-6">
+      <section id="about-me">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <img src="https://placehold.co/600x800" alt="" />
+            </div>
 
-                    <h1 class="title-intro">Já pensou em você hoje?</h1>
-                    <a href="#" class="btn btn-outline-info">Teste</a>
+            <div class="col-12 col-md-6">
+              <h1>Quem sou eu?</h1>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+                soluta beatae expedita assumenda maiores voluptates, nam ratione
+                labore fugit. Deleniti!
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+                soluta beatae expedita assumenda maiores voluptates, nam ratione
+                labore fugit. Deleniti!
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+                soluta beatae expedita assumenda maiores voluptates, nam ratione
+                labore fugit. Deleniti!
+              </p>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+                soluta beatae expedita assumenda maiores voluptates, nam ratione
+                labore fugit. Deleniti!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="psychotherapies">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1>As minhas Psicoterapias</h1>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <img src="https://placehold.co/100x100" />
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, officiis.
+              </p>
+
+              <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <img src="https://placehold.co/100x100" />
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, officiis.
+              </p>
+
+              <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <img src="https://placehold.co/100x100" />
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, officiis.
+              </p>
+
+              <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+              <img src="https://placehold.co/100x100" />
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellendus, officiis.
+              </p>
+
+              <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cto-1">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <p>Faça o agendamento da sua consulta online!</p>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <a href="#" class="btn btn-primary">Agendar agora</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-specfic-service">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <h1>Terapia do Esquema / Cognitivo Comportamental</h1>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit in nam dolorem enim, cumque et tempora possimus minus
+                repellat nobis assumenda ut eius laudantium? Voluptate pariatur
+                earum in nostrum suscipit accusantium animi corporis, modi
+                mollitia alias fuga delectus beatae non laboriosam saepe omnis
+                praesentium incidunt dignissimos velit sed labore temporibus!
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit in nam dolorem enim, cumque et tempora possimus minus
+                repellat nobis assumenda ut eius laudantium? Voluptate pariatur
+                earum in nostrum suscipit accusantium animi corporis, modi
+                mollitia alias fuga delectus beatae non laboriosam saepe omnis
+                praesentium incidunt dignissimos velit sed labore temporibus!
+              </p>
+
+              <a href="#" class="btn btn-primary">Agendar agora</a>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <img src="https://placehold.co/600x600" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="latest-posts">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Novidades no Blog</h1>
                 </div>
             </div>
-
-        </section>
-
-        <section class="about-me">
-            <div class="container">
-                <h1 class="title">Patricia Caliano</h1>
-
-                <div class="row">
-                    <div class="col-6">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nihil delectus commodi beatae quia! Temporibus voluptatibus saepe corporis sequi a officiis illo quos unde, ex repellendus qui dolores voluptatum dolore fugiat id molestiae vero ab. Nemo maxime quisquam magni obcaecati eum ipsa neque nostrum! Aspernatur voluptatem sunt velit laborum perferendis.</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sequi expedita ut dolorum quasi omnis beatae eum repudiandae asperiores sapiente, architecto, sunt quae. Magnam, eius? Numquam vel alias a obcaecati quo sequi nihil. Itaque quos, blanditiis aspernatur quisquam, natus tenetur vitae eaque provident inventore ea nesciunt? Molestiae placeat doloremque incidunt.</p>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sequi expedita ut dolorum quasi omnis beatae eum repudiandae asperiores sapiente, architecto, sunt quae. Magnam, eius? Numquam vel alias a obcaecati quo sequi nihil. Itaque quos, blanditiis aspernatur quisquam, natus tenetur vitae eaque provident inventore ea nesciunt? Molestiae placeat doloremque incidunt.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="services">
-            <div class="container">
-                <h1 class="title">Serviços</h1>
-                <p>Conheça algumas maneiras com que posso te ajudar</p>
-
-                <div class="row card-list">
-
-                    <div class="col-3 d-flex align-items-strech">
-                        <div class="card">
-                            <img src="./assets/img/service.gif" alt="" class="card-image">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Saiba Mais <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-3 d-flex align-items-strech">
-                        <div class="card">
-                            <img src="./assets/img/service.gif" alt="" class="card-image">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Saiba Mais <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-3 d-flex align-items-strech">
-                        <div class="card">
-                            <img src="./assets/img/service.gif" alt="" class="card-image">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Saiba Mais <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-3 d-flex align-items-strech">
-                        <div class="card">
-                            <img src="./assets/img/service.gif" alt="" class="card-image">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Saiba Mais <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta">
-
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-6">
-    
-                        <h1 class="title-intro">Mentoria ou Terapia</h1>
-    
-                    </div>
-    
-                    <div class="col-6">
-                        <p>Está na dúvida se precisa de uma mentoria ou teriapia? Não tem problema, para te ajudar nessa escolha, preparei um questionário com algumas perguntas para realizarmos essa avaliação. O questionário é rápido, então, o que está esperando?</p>
-
-                        <a href="#" class="btn link light-btn big-btn">Realizar teste agora <i class="bi bi-arrow-right-short"></i></a>
-                    </div>
-
-                </div>
-            </div>
-           
-        </section>
-
-        <section class="instagram">
-            <div class="container">
-                <h1 class="title">Instagram</h1>
-                <p>Me acompanhe no insta</p>
-                
-                <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/6c73e604d1dd56df94c5f8bce62dfb60.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-
-                <a href="#" class="btn link line-btn">@patriciaCaliano <i class="bi bi-arrow-right-short"></i></a>
-            </div>
-        </section>
-
-        <section class="blog">
-            <div class="container">
-                <h1 class="title">Meu blog</h1>
-                <p>Reflexões sobre ser mulher</p>
-
-                <div class="row card-list">
-                    <div class="col-3 d-flex align-items-strech">
-                        <div class="card">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Continue Lendo <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="col-3 d-flex align-items-strech">
-                        <div class="card">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Continue Lendo <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-3 d-flex align-items-strech">
-                        <div class="card">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Continue Lendo <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-3 d-flex align-items-strech">
-                        <div class="card">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Continue Lendo <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    
-
-                    <a href="#" class="btn link">Ver outras postagens <i class="bi bi-arrow-right-short"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <section class="courses">
-            <div class="container">
-
-                <h1 class="title">Cursos</h1>
-                <p>Procurando alguma ajuda específica?</p>
-
-                <div class="row card-list">
-
-                    <div class="col-4 d-flex align-items-strech">
-                        <div class="card">
-                            <img src="./assets/img/service.gif" alt="" class="card-image">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Continue Lendo <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-4 d-flex align-items-strech">
-                        <div class="card">
-                            <img src="./assets/img/service.gif" alt="" class="card-image">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Continue Lendo <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-4 d-flex align-items-strech">
-                        <div class="card">
-                            <img src="./assets/img/service.gif" alt="" class="card-image">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Continue Lendo <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-4 d-flex align-items-strech">
-                        <div class="card">
-                            <img src="./assets/img/service.gif" alt="" class="card-image">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Continue Lendo <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-4 d-flex align-items-strech">
-                        <div class="card">
-                            <img src="./assets/img/service.gif" alt="" class="card-image">
-                            <span class="card-title">Lorem, ipsum dolor.</span>
-                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eum delectus quae ipsa esse aliquid reprehenderit odit maiores veritatis.</p>
-    
-                            <a href="#" class="btn link">Continue Lendo <i class="bi bi-arrow-right-short"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="contact">
-            <div class="container">
-                <h1 class="title">Contato</h1>
-
-                <div class="col-6">
-                    <p>Se quiser falar comigo sobre sessões de Psicoterapia, Coaching, Workshops ou Treinamentos, agende uma conversa comigo pelo whatsapp ou enviando um email.</p>
-
-                    <a href="#" class="btn whatsapp"><i class="bi bi-whatsapp"></i>Whatsapp</a>
-                    <a href="#" class="btn email"><i class="bi bi-envelope"></i>E-mail</a>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="social-media">
-            <div class="container">
-                <div class="row text-center">
-                    <h1>Siga-me nas redes sociais</h1>
-
-                    <ul>
-                        <li>
-                            <a href="#"><i class="bi bi-facebook"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                        </li>
-
-                        <li>
-                            <a href="#"><i class="bi bi-youtube"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        </div>
+      </section>
     </main>
-
-    <footer>
-        <p>© Copyright 2022 Patricia Caliano - Todos os direitos reservados | Patricia C. Caliano - CRP 05/15309</p>
-    </footer>
-
-    <script src="./assets/js/bootstrap.min.js"></script>
-</body>
-
+  </body>
 </html>
