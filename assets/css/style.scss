@@ -27,6 +27,13 @@ $dark-pink: #610e24;
   --bs-btn-font-weight: bold;
   --bs-btn-padding: 0.5rem 1.25rem;
   width: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+      rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  }
 }
 
 section {
@@ -54,23 +61,23 @@ h4,
   font-size: 1.25rem;
 }
 
-.separator{
+.separator {
   display: flex;
   justify-content: center;
-  align-items: center;  
-  gap: 1.25rem;
+  align-items: center;
+  gap: 1rem;
 
-  &:before, &:after{
-    content: '';
+  &:before,
+  &:after {
+    content: "";
     width: 150px;
-    height: 5px;
+    height: 4px;
     background: $bright-pink;
     display: block;
   }
 
-  img{
+  img {
     width: 30px;
-    filter: invert(33%) sepia(14%) saturate(5722%) hue-rotate(308deg) brightness(102%) contrast(100%)
   }
 }
 
@@ -114,12 +121,41 @@ h4,
     color: $bright-pink;
   }
 
-
-
   img {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     // border-radius: 20px 0 20px 0;
     border: 20px #fff solid;
     max-width: 100%;
+  }
+}
+
+#psychotherapies {
+  .service-item {
+    gap: 1rem;
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+}
+
+#cto-1 {
+  background-color: $dark-yellow;
+  .btn {
+    font-size: 2rem;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 50px;
+    color: $bright-pink;
+    background-color: #fff;
+    border: 0;
+
+    &:hover {
+      color: $dark-pink;
+    }
   }
 }
