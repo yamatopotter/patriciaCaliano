@@ -132,4 +132,19 @@ h4,
 }
 #cto-1 .btn:hover {
   color: #610e24;
+}
+
+#about-specific-service h1 {
+  font-weight: bold;
+}
+#about-specific-service img {
+  width: 100%;
+}
+
+#latest-posts {
+  background-color: #e1dacb;
+}
+#latest-posts h1,
+#latest-posts p {
+  color: #610e24;
 }/*# sourceMappingURL=style.css.map */

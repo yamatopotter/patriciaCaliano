@@ -159,3 +159,23 @@ h4,
     }
   }
 }
+
+#about-specific-service {
+  h1 {
+    font-weight: bold;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+#latest-posts {
+  background-color: $dark-yellow;
+  h1,
+  p {
+    color: $dark-pink;
+  }
+
+  
+}
