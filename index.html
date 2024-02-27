@@ -14,13 +14,14 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Patricia Caliano</title>
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#"><img src="./assets/img/01.png" /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -32,35 +33,19 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
-              </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#">Link</a>
               </li>
             </ul>
           </div>
@@ -72,12 +57,18 @@
       <section id="intro">
         <div class="container">
           <div class="row">
-            <img src="https://placehold.co/100x100" />
-            <h1>Um convite para comear sua melhor vida!</h1>
-            <p>
-              saiba como posso ajudar no seu crescimento pessoal e profissional
-            </p>
-            <a href="#" class="btn btn-primary">Saiba mais</a>
+            <div class="col-12 col-md-9 d-flex flex-column gap-2">
+              <img src="./assets/img/02.png" id="brain-img" />
+              <h1 class="d-flex flex-column">
+                <span>Um convite para</span>
+                <span class="bold">começar sua melhor vida!</span>
+              </h1>
+              <p class="h4">
+                saiba como posso ajudar no seu crescimento pessoal e
+                profissional
+              </p>
+              <a href="#" class="btn btn-primary">Saiba mais</a>
+            </div>
           </div>
         </div>
       </section>
@@ -86,11 +77,11 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-6">
-              <img src="https://placehold.co/600x800" alt="" />
+              <img src="./assets/img/04.png" alt="" />
             </div>
 
             <div class="col-12 col-md-6">
-              <h1>Quem sou eu?</h1>
+              <h1>Quem <span class="bold">eu sou?</span></h1>
 
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
@@ -120,8 +111,9 @@
       <section id="psychotherapies">
         <div class="container">
           <div class="row">
-            <div class="col-12">
-              <h1>As minhas Psicoterapias</h1>
+            <div class="col-12 text-center mb-5">
+              <h1>As minhas <span class="bold">Psicoterapias</span></h1>
+              <span class="separator"><img src="./assets/img/02.png" /></span>
             </div>
 
             <div class="col-12 col-md-6 col-lg-3">
@@ -299,22 +291,26 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-6">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat obcaecati quos, hic minus esse praesentium soluta commodi dolorem dolore illo!</p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellat obcaecati quos, hic minus esse praesentium soluta
+                commodi dolorem dolore illo!
+              </p>
 
-              <img src="http://placehold.co/50x50"/><span>21 22222222222</span>
-              <img src="http://placehold.co/50x50"/><span>contato@patriciacaliano.com.br</span>
+              <img src="http://placehold.co/50x50" /><span>21 22222222222</span>
+              <img src="http://placehold.co/50x50" /><span
+                >contato@patriciacaliano.com.br</span
+              >
             </div>
           </div>
 
           <div class="col-12 col-lg-6">
-            <img src="https://placehold.co/600x600" alt="">
+            <img src="https://placehold.co/600x600" alt="" />
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
   </body>
 </html>
