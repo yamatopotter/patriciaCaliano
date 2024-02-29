@@ -230,52 +230,64 @@
       <section id="latest-posts">
         <div class="container">
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center mb-4">
               <h1>Novidades no Blog</h1>
-            
+              <span class="separator"
+                ><img src="./assets/img/dark-pink-comment.png"
+              /></span>
             </div>
+          </div>
 
+          <div class="row">
             <article class="col-12 col-lg-4">
-              <h1>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate, tempora!
-              </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-                unde. Delectus nihil animi voluptas cupiditate nisi mollitia
-                sapiente quas consequatur.
-              </p>
-              <time>date of post</time>
+              <div class="card">
+                <h1>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptate, tempora!
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+                  unde. Delectus nihil animi voluptas cupiditate nisi mollitia
+                  sapiente quas consequatur.
+                </p>
+                <time>date of post</time>
+              </div>
             </article>
 
             <article class="col-12 col-lg-4">
-              <h1>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate, tempora!
-              </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-                unde. Delectus nihil animi voluptas cupiditate nisi mollitia
-                sapiente quas consequatur.
-              </p>
-              <time>date of post</time>
+              <div class="card">
+                <h1>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptate, tempora!
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+                  unde. Delectus nihil animi voluptas cupiditate nisi mollitia
+                  sapiente quas consequatur.
+                </p>
+                <time>date of post</time>
+              </div>
             </article>
 
             <article class="col-12 col-lg-4">
-              <h1>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptate, tempora!
-              </h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-                unde. Delectus nihil animi voluptas cupiditate nisi mollitia
-                sapiente quas consequatur.
-              </p>
-              <time>date of post</time>
+              <div class="card">
+                <h1>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptate, tempora!
+                </h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+                  unde. Delectus nihil animi voluptas cupiditate nisi mollitia
+                  sapiente quas consequatur.
+                </p>
+                <time>date of post</time>
+              </div>
             </article>
 
-            <div class="col-12">
-              <a href="#" class="btn btn-primary">Veja mais publicações</a>
+            <div class="col-12 d-flex justify-content-center mt-5">
+              <a href="#" class="btn btn-primary m-auto"
+                >Veja mais publicações</a
+              >
             </div>
           </div>
         </div>
@@ -284,10 +296,33 @@
       <section id="slider">
         <div class="container">
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center mb-4">
               <h1>Quem confia no meu trabalho</h1>
+              <span class="separator"
+                ><img src="./assets/img/pink-chat.png"
+              /></span>
             </div>
 
+            <div class="col-12">
+              <swiper-container
+                class="mySwiper"
+                pagination="true"
+                pagination-clickable="true"
+                navigation="true"
+                space-between="30"
+                loop="true"
+              >
+                <swiper-slide>Slide 1</swiper-slide>
+                <swiper-slide>Slide 2</swiper-slide>
+                <swiper-slide>Slide 3</swiper-slide>
+                <swiper-slide>Slide 4</swiper-slide>
+                <swiper-slide>Slide 5</swiper-slide>
+                <swiper-slide>Slide 6</swiper-slide>
+                <swiper-slide>Slide 7</swiper-slide>
+                <swiper-slide>Slide 8</swiper-slide>
+                <swiper-slide>Slide 9</swiper-slide>
+              </swiper-container>
+            </div>
             <div class="col-12">
               <h2>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
@@ -329,5 +364,7 @@
     </main>
 
     <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>
