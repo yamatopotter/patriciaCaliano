@@ -207,3 +207,63 @@ h4,
 #slider {
   background-color: $bright-yellow;
 }
+
+.swiper p,
+.swiper h2 {
+  color: $dark-pink;
+}
+
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  color: #de3867;
+}
+
+swiper-container::part(bullet-active) {
+  background-color: #de3867;
+}
+
+#contact {
+  background: rgb(255, 255, 255);
+  color: $dark-pink;
+  background: url('../img/cerebro-background.png') no-repeat right center, linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(225, 218, 203, 1)100%
+
+    
+  );
+  padding: 80px 0 0 0;
+
+  .text {
+    font-size: 2rem;
+  }
+
+  .contact-info{
+    img{
+      max-width: 50px;
+    }
+
+    color: $bright-pink;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+}
+
+#default-footer {
+  background: $dark-yellow;
+  padding: 20px 0;
+  
+  .social-media{
+    img{
+      max-width: 40px;
+    }
+  }
+
+  p{
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0;
+    text-align: right;
+  }
+}
