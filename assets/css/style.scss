@@ -38,27 +38,44 @@ $dark-pink: #610e24;
 
 section {
   padding: 80px 0;
+
+  @media screen and (max-width: 991px) {
+    padding: 40px 0;
+  }
 }
 
 h1,
 .h1 {
   font-size: 3rem;
   color: $bright-pink;
+
+  @media screen and (max-width: 991px) {
+    font-size: 2rem;
+  }
 }
 
 h2,
 .h2 {
   font-size: 2rem;
+  @media screen and (max-width: 991px) {
+    font-size: 1.5rem;
+  }
 }
 
 h3,
 .h3 {
   font-size: 1.5rem;
+  @media screen and (max-width: 991px) {
+    font-size: 1.25rem;
+  }
 }
 
 h4,
 .h4 {
   font-size: 1.25rem;
+  @media screen and (max-width: 991px) {
+    font-size: 1.125rem;
+  }
 }
 
 .separator {
@@ -117,6 +134,7 @@ h4,
 
 #about-me {
   background-color: $dark-yellow;
+
   h1 {
     color: $bright-pink;
   }
@@ -126,12 +144,23 @@ h4,
     // border-radius: 20px 0 20px 0;
     border: 20px #fff solid;
     max-width: 100%;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
 #psychotherapies {
   .service-item {
     gap: 1rem;
+    @media screen and (max-width: 991px) {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     img {
       max-width: 100%;
     }
@@ -157,6 +186,11 @@ h4,
     &:hover {
       color: $dark-pink;
     }
+
+    @media screen and (max-width: 768px) {
+      margin: 0 auto;
+      display: block;
+    }
   }
 }
 
@@ -167,6 +201,17 @@ h4,
 
   img {
     width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .btn {
+      display: block;
+      margin: 0 auto;
+    }
+
+    img {
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -201,6 +246,14 @@ h4,
     h1 {
       font-size: 1.25rem;
     }
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -225,22 +278,21 @@ swiper-container::part(bullet-active) {
 #contact {
   background: rgb(255, 255, 255);
   color: $dark-pink;
-  background: url('../img/cerebro-background.png') no-repeat right center, linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 35%,
-    rgba(225, 218, 203, 1)100%
-
-    
-  );
+  background: url("../img/cerebro-background.png") no-repeat right center,
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 35%,
+      rgba(225, 218, 203, 1) 100%
+    );
   padding: 80px 0 0 0;
 
   .text {
     font-size: 2rem;
   }
 
-  .contact-info{
-    img{
+  .contact-info {
+    img {
       max-width: 50px;
     }
 
@@ -248,22 +300,70 @@ swiper-container::part(bullet-active) {
     font-weight: bold;
     font-size: 1.25rem;
   }
+
+  #contact-picture {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 40px;
+    .text {
+      font-size: 1.25rem;
+    }
+
+    .contact-info {
+      font-size: 1rem;
+      img {
+        max-width: 25px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    padding-top: 40px;
+    .text {
+      font-size: 1.25rem;
+    }
+
+    .contact-info {
+      font-size: 1.125rem;
+      img {
+        max-width: 25px;
+      }
+    }
+  }
 }
 
 #default-footer {
   background: $dark-yellow;
   padding: 20px 0;
-  
-  .social-media{
-    img{
+
+  .social-media {
+    img {
       max-width: 40px;
     }
   }
 
-  p{
+  p {
     font-weight: bold;
     color: #fff;
     margin-bottom: 0;
     text-align: right;
+  }
+
+  @media screen and (max-width: 768px) {
+    .social-media {
+      justify-content: center;
+    }
+    p {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    p {
+      font-size: 0.85rem;
+    }
   }
 }

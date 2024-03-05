@@ -29,26 +29,55 @@
 section {
   padding: 80px 0;
 }
+@media screen and (max-width: 991px) {
+  section {
+    padding: 40px 0;
+  }
+}
 
 h1,
 .h1 {
   font-size: 3rem;
   color: #de3867;
 }
+@media screen and (max-width: 991px) {
+  h1,
+  .h1 {
+    font-size: 2rem;
+  }
+}
 
 h2,
 .h2 {
   font-size: 2rem;
+}
+@media screen and (max-width: 991px) {
+  h2,
+  .h2 {
+    font-size: 1.5rem;
+  }
 }
 
 h3,
 .h3 {
   font-size: 1.5rem;
 }
+@media screen and (max-width: 991px) {
+  h3,
+  .h3 {
+    font-size: 1.25rem;
+  }
+}
 
 h4,
 .h4 {
   font-size: 1.25rem;
+}
+@media screen and (max-width: 991px) {
+  h4,
+  .h4 {
+    font-size: 1.125rem;
+  }
 }
 
 .separator {
@@ -106,9 +135,22 @@ h4,
   border: 20px #fff solid;
   max-width: 100%;
 }
+@media screen and (max-width: 768px) {
+  #about-me img {
+    margin-bottom: 2rem;
+  }
+}
 
 #psychotherapies .service-item {
   gap: 1rem;
+}
+@media screen and (max-width: 991px) {
+  #psychotherapies .service-item {
+    margin-bottom: 2rem;
+  }
+  #psychotherapies .service-item:last-child {
+    margin-bottom: 0;
+  }
 }
 #psychotherapies .service-item img {
   max-width: 100%;
@@ -133,12 +175,27 @@ h4,
 #cto-1 .btn:hover {
   color: #610e24;
 }
+@media screen and (max-width: 768px) {
+  #cto-1 .btn {
+    margin: 0 auto;
+    display: block;
+  }
+}
 
 #about-specific-service h1 {
   font-weight: bold;
 }
 #about-specific-service img {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  #about-specific-service .btn {
+    display: block;
+    margin: 0 auto;
+  }
+  #about-specific-service img {
+    margin-top: 2rem;
+  }
 }
 
 #latest-posts {
@@ -162,6 +219,14 @@ h4,
 }
 #latest-posts article h1 {
   font-size: 1.25rem;
+}
+@media screen and (max-width: 991px) {
+  #latest-posts article {
+    margin-bottom: 2rem;
+  }
+  #latest-posts article:last-child {
+    margin-bottom: 0;
+  }
 }
 
 #slider {
@@ -199,6 +264,37 @@ swiper-container::part(bullet-active) {
 #contact .contact-info img {
   max-width: 50px;
 }
+#contact #contact-picture {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  #contact {
+    padding-top: 40px;
+  }
+  #contact .text {
+    font-size: 1.25rem;
+  }
+  #contact .contact-info {
+    font-size: 1rem;
+  }
+  #contact .contact-info img {
+    max-width: 25px;
+  }
+}
+@media screen and (max-width: 991px) {
+  #contact {
+    padding-top: 40px;
+  }
+  #contact .text {
+    font-size: 1.25rem;
+  }
+  #contact .contact-info {
+    font-size: 1.125rem;
+  }
+  #contact .contact-info img {
+    max-width: 25px;
+  }
+}
 
 #default-footer {
   background: #e1dacb;
@@ -212,4 +308,18 @@ swiper-container::part(bullet-active) {
   color: #fff;
   margin-bottom: 0;
   text-align: right;
+}
+@media screen and (max-width: 768px) {
+  #default-footer .social-media {
+    justify-content: center;
+  }
+  #default-footer p {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 991px) {
+  #default-footer p {
+    font-size: 0.85rem;
+  }
 }/*# sourceMappingURL=style.css.map */
