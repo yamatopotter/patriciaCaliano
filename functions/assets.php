@@ -1,8 +1,8 @@
 <?php
 
-function register_assets()
+function enqueue_site_assets()
 {
-    // Bootstrap
+    // registering assets
     wp_register_style('bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
     wp_register_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js');
 
@@ -11,12 +11,6 @@ function register_assets()
 
     // Template
     wp_register_style('style', get_template_directory_uri() . '/assets/css/style.css');
-}
-
-function enqueue_site_assets()
-{
-    // registering assets
-    register_assets();
 
     // Bootstrap
     wp_enqueue_style('bootstrap');
@@ -26,5 +20,4 @@ function enqueue_site_assets()
     // Template
     wp_enqueue_style('style');
 }
-
-add_action('init', enqueue_site_assets());
+add_action('wp_enqueue_scripts', 'enqueue_site_assets');
