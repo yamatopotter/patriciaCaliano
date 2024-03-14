@@ -8,6 +8,7 @@ function enqueue_site_assets()
 
     //  Swiper
     wp_register_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js');
+    wp_register_script('main', get_template_directory_uri() . '/assets/js/main.js');
 
     // Template
     wp_register_style('style', get_template_directory_uri() . '/assets/css/style.css');
@@ -17,6 +18,7 @@ function enqueue_site_assets()
     wp_enqueue_script('bootstrap');
 
     wp_enqueue_script('swiper');
+    wp_enqueue_script('main');
     // Template
     wp_enqueue_style('style');
 }

@@ -1,6 +1,8 @@
 <?php
 require_once('functions/assets.php');
 require_once('custom-controls-functions.php');
+require_once('customizer-repeater/functions.php');
+require_once('customizer-repeater/inc/customizer.php');
 require_once('functions/navwalker-bootstrap.php');
 
 // Registrando um menu
@@ -24,6 +26,7 @@ function theme_customizer_settings($wp_customize)
 
     include_once('functions/customizer/header.php');
     include_once('functions/customizer/about-me.php');
+    include_once('functions/customizer/psychoterapies.php');
 }
 
 add_action('customize_register', 'theme_customizer_settings');

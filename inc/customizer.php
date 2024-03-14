@@ -16,30 +16,30 @@ class skyrocket_initialise_customizer_settings {
 		$this->defaults = skyrocket_generate_defaults();
 
 		// Register our Panels
-		add_action( 'customize_register', array( $this, 'skyrocket_add_customizer_panels' ) );
+		// add_action( 'customize_register', array( $this, 'skyrocket_add_customizer_panels' ) );
 
-		// Register our sections
-		add_action( 'customize_register', array( $this, 'skyrocket_add_customizer_sections' ) );
+		// // Register our sections
+		// add_action( 'customize_register', array( $this, 'skyrocket_add_customizer_sections' ) );
 
-		// Register our social media controls
-		add_action( 'customize_register', array( $this, 'skyrocket_register_social_controls' ) );
+		// // Register our social media controls
+		// add_action( 'customize_register', array( $this, 'skyrocket_register_social_controls' ) );
 
-		// Register our contact controls
-		add_action( 'customize_register', array( $this, 'skyrocket_register_contact_controls' ) );
+		// // Register our contact controls
+		// add_action( 'customize_register', array( $this, 'skyrocket_register_contact_controls' ) );
 
-		// Register our search controls
-		add_action( 'customize_register', array( $this, 'skyrocket_register_search_controls' ) );
+		// // Register our search controls
+		// add_action( 'customize_register', array( $this, 'skyrocket_register_search_controls' ) );
 
-		// Register our WooCommerce controls, only if WooCommerce is active
-		if( skyrocket_is_woocommerce_active() ) {
-			add_action( 'customize_register', array( $this, 'skyrocket_register_woocommerce_controls' ) );
-		}
+		// // Register our WooCommerce controls, only if WooCommerce is active
+		// if( skyrocket_is_woocommerce_active() ) {
+		// 	add_action( 'customize_register', array( $this, 'skyrocket_register_woocommerce_controls' ) );
+		// }
 
-		// Register our sample Custom Control controls
-		add_action( 'customize_register', array( $this, 'skyrocket_register_sample_custom_controls' ) );
+		// // Register our sample Custom Control controls
+		// add_action( 'customize_register', array( $this, 'skyrocket_register_sample_custom_controls' ) );
 
-		// Register our sample default controls
-		add_action( 'customize_register', array( $this, 'skyrocket_register_sample_default_controls' ) );
+		// // Register our sample default controls
+		// add_action( 'customize_register', array( $this, 'skyrocket_register_sample_default_controls' ) );
 
 	}
 

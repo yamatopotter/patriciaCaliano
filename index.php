@@ -47,53 +47,28 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center mb-5">
-          <h1>As minhas <span class="bold">Psicoterapias</span></h1>
+          <h1 class="last-word-bold"><?= get_theme_mod('title_psychotherapies') == '' ? 'As minhas Psicoterapias' : get_theme_mod('title_psychotherapies') ?></h1>
           <span class="separator"><img src="./assets/img/pink-brain.png" /></span>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center service-item">
-          <img src="./assets/img/05.png" />
+        <?php
+        $repeater = get_theme_mod('customizer_repeater_psychotherapies', json_encode(array(/*The content from your default parameter or delete this argument if you don't want a default*/)));
+        /*This returns a json so we have to decode it*/
+        $repeater_decoded = json_decode($repeater);
+        foreach ($repeater_decoded as $repeater_item) : ?>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repellendus, officiis.
-          </p>
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center service-item">
+            <img src="<?= $repeater_item->image_url; ?>" />
 
-          <a href="#" class="btn btn-primary">Saiba mais</a>
-        </div>
+            <p>
+              <?= $repeater_item->text; ?>
+            </p>
 
-        <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center service-item">
-          <img src="./assets/img/06.png" />
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repellendus, officiis.
-          </p>
-
-          <a href="#" class="btn btn-primary">Saiba mais</a>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center service-item">
-          <img src="./assets/img/07.png" />
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repellendus, officiis.
-          </p>
-
-          <a href="#" class="btn btn-primary">Saiba mais</a>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center service-item">
-          <img src="./assets/img/08.png" />
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Repellendus, officiis.
-          </p>
-
-          <a href="#" class="btn btn-primary">Saiba mais</a>
-        </div>
+            <a href="<?= $repeater_item->link ?>" class="btn btn-primary">Saiba mais</a>
+          </div>
+        <?php
+        endforeach;
+        ?>
       </div>
     </div>
   </section>
