@@ -5,16 +5,21 @@
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-9 d-flex flex-column gap-2">
-          <img src="./assets/img/02.png" id="brain-img" />
+          <?php if (get_theme_mod('img_intro') != '') : ?>
+            <img src="<?= get_theme_mod('img_intro'); ?>" id="brain-img" />
+          <?php endif; ?>
+
           <h1 class="d-flex flex-column">
-            <span>Um convite para</span>
-            <span class="bold">começar sua melhor vida!</span>
+            <span><?= get_theme_mod('title_intro_l1'); ?></span>
+            <span class="bold"><?= get_theme_mod('title_intro_l2'); ?></span>
           </h1>
           <p class="h4">
-            saiba como posso ajudar no seu crescimento pessoal e
-            profissional
+            <?= get_theme_mod('text_intro'); ?>
           </p>
-          <a href="#" class="btn btn-primary">Saiba mais</a>
+
+          <?php if (get_theme_mod('link_btn') != '') : ?>
+            <a href="<?= get_theme_mod('link_btn') ?>" class="btn btn-primary">Saiba mais</a>
+          <?php endif; ?>
         </div>
       </div>
     </div>
@@ -24,32 +29,15 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-6">
-          <img src="./assets/img/04.png" alt="" />
+          <?php if (get_theme_mod('img_about_me') != '') : ?>
+            <img src="<?= get_theme_mod('img_about_me') ?>" />
+          <?php endif; ?>
         </div>
 
         <div class="col-12 col-md-6">
-          <h1>Quem <span class="bold">eu sou?</span></h1>
+          <h1><?= get_theme_mod('title_about_us_1') == '' ? "Quem" : get_theme_mod('title_about_us_1') ?> <span class="bold"><?= get_theme_mod('title_about_us_2') == '' ? "eu sou?" : get_theme_mod('title_about_us_2') ?></span></h1>
 
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta beatae expedita assumenda maiores voluptates, nam ratione
-            labore fugit. Deleniti!
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta beatae expedita assumenda maiores voluptates, nam ratione
-            labore fugit. Deleniti!
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta beatae expedita assumenda maiores voluptates, nam ratione
-            labore fugit. Deleniti!
-          </p>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            soluta beatae expedita assumenda maiores voluptates, nam ratione
-            labore fugit. Deleniti!
-          </p>
+          <?= get_theme_mod('text_about_me') ?>
         </div>
       </div>
     </div>
