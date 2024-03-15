@@ -95,8 +95,10 @@
       <div class="row align-items-center">
         <div class="col-12 col-md-7 col-lg-8">
           <h1 class="d-flex flex-column mb-4">
-            <span>Terapia do Esquema</span>
-            <span>Cognitivo Comportamental</span>
+            <span><?= get_theme_mod('title_specific_service_l1') ?></span>
+            <?php if (get_theme_mod('title_specific_service_l2') !== '') : ?>
+              <span><?= get_theme_mod('title_specific_service_l2'); ?></span>
+            <?php endif; ?>
           </h1>
 
           <p>
@@ -117,7 +119,9 @@
             praesentium incidunt dignissimos velit sed labore temporibus!
           </p>
 
-          <a href="#" class="btn btn-primary">Agendar agora</a>
+          <?php if (get_theme_mod('link_btn_specific_services')) : ?>
+            <a href="<?php get_theme_mod('link_btn_specific_services') ?>" class="btn btn-primary"><?php get_theme_mod('text_btn_specific_services') ?></a>
+          <?php endif; ?>
         </div>
 
         <div class="col-12 col-md-5 col-lg-4">
