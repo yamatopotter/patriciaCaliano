@@ -135,7 +135,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center mb-4">
-          <h1>Novidades no Blog</h1>
+          <h1><?= get_theme_mod('title_latest_posts') == '') ? 'Novidades no Blog' : get_theme_mod('title_latest_posts') ?></h1>
           <span class="separator"><img src="./assets/img/dark-pink-comment.png" /></span>
         </div>
       </div>
