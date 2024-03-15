@@ -125,7 +125,7 @@
         </div>
 
         <div class="col-12 col-md-5 col-lg-4">
-          <img src="./assets/img/09.png" />
+          <img src="<?php get_theme_mod('img_specific_services') ?>" />
         </div>
       </div>
     </div>
