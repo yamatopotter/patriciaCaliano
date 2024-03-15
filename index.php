@@ -78,13 +78,13 @@
       <div class="row align-items-center">
         <div class="col-12 col-md-6">
           <h1 class="d-flex flex-column text-center text-md-end">
-            <span>Faça o agendamento</span>
-            <span class="bold"> da sua consulta online! </span>
+            <span><?= get_theme_mod('title_cto_l1') == '' ? 'Faça o agendamento' : get_theme_mod('title_cto_l1'); ?></span>
+            <span class="bold"><?= get_theme_mod('title_cto_l2') == '' ? 'Faça o agendamento' : get_theme_mod('title_cto_l2'); ?></span>
           </h1>
         </div>
 
         <div class="col-12 col-md-6">
-          <a href="#" class="btn btn-primary">Agendar agora</a>
+          <a href="<?= get_theme_mod('link_btn_cto') == '' ? '#' : get_theme_mod('link_btn_cto'); ?>" class="btn btn-primary"><?= get_theme_mod('text_btn_cto') == '' ? 'Agende agora' : get_theme_mod('text_btn_cto'); ?></a>
         </div>
       </div>
     </div>
