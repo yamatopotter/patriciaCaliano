@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+get_header();
+$posts_query = new WP_Query(array('post_type' => 'post', 'orderby' => 'publish_date', 'order' => 'DESC', 'posts_per_page' => 3));
+?>
 
 <main>
   <section id="intro">
@@ -101,31 +104,15 @@
             <?php endif; ?>
           </h1>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Suscipit in nam dolorem enim, cumque et tempora possimus minus
-            repellat nobis assumenda ut eius laudantium? Voluptate pariatur
-            earum in nostrum suscipit accusantium animi corporis, modi
-            mollitia alias fuga delectus beatae non laboriosam saepe omnis
-            praesentium incidunt dignissimos velit sed labore temporibus!
-          </p>
+          <?= get_theme_mod('text_about_specific_service') ?>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Suscipit in nam dolorem enim, cumque et tempora possimus minus
-            repellat nobis assumenda ut eius laudantium? Voluptate pariatur
-            earum in nostrum suscipit accusantium animi corporis, modi
-            mollitia alias fuga delectus beatae non laboriosam saepe omnis
-            praesentium incidunt dignissimos velit sed labore temporibus!
-          </p>
-
-          <?php if (get_theme_mod('link_btn_specific_services')) : ?>
-            <a href="<?php get_theme_mod('link_btn_specific_services') ?>" class="btn btn-primary"><?php get_theme_mod('text_btn_specific_services') ?></a>
+          <?php if (get_theme_mod('link_btn_specific_service') != '') : ?>
+            <a href="<?php get_theme_mod('link_btn_specific_service') ?>" class="btn btn-primary"><?= get_theme_mod('text_btn_specific_service') ?></a>
           <?php endif; ?>
         </div>
 
         <div class="col-12 col-md-5 col-lg-4">
-          <img src="<?php get_theme_mod('img_specific_services') ?>" />
+          <img src="<?= get_theme_mod('img_specific_service') ?>" />
         </div>
       </div>
     </div>
@@ -141,50 +128,21 @@
       </div>
 
       <div class="row">
-        <article class="col-12 col-lg-4">
-          <div class="card">
-            <h1>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptate, tempora!
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              unde. Delectus nihil animi voluptas cupiditate nisi mollitia
-              sapiente quas consequatur.
-            </p>
-            <time>date of post</time>
-          </div>
-        </article>
 
-        <article class="col-12 col-lg-4">
-          <div class="card">
-            <h1>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptate, tempora!
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              unde. Delectus nihil animi voluptas cupiditate nisi mollitia
-              sapiente quas consequatur.
-            </p>
-            <time>date of post</time>
-          </div>
-        </article>
-
-        <article class="col-12 col-lg-4">
-          <div class="card">
-            <h1>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptate, tempora!
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
-              unde. Delectus nihil animi voluptas cupiditate nisi mollitia
-              sapiente quas consequatur.
-            </p>
-            <time>date of post</time>
-          </div>
-        </article>
+        <?php if ($posts_query->have_posts()) : while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
+            <article class="col-12 col-lg-4">
+              <div class="card">
+                <h1>
+                  <a href="<?= the_permalink() ?>"><?= the_title(); ?></a>
+                </h1>
+                <p>
+                  <?= the_excerpt(); ?>
+                </p>
+                <time><?= the_date() ?></time>
+              </div>
+            </article>
+        <?php endwhile;
+        endif ?>
 
         <div class="col-12 d-flex justify-content-center mt-0 mt-lg-5">
           <a href="#" class="btn btn-primary m-auto">Veja mais publicações</a>
@@ -197,28 +155,28 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center mb-4">
-          <h1>Quem confia no meu trabalho</h1>
+          <h1><?= get_theme_mod('title_slider') == '' ? 'Quem confia no meu trabalho' : get_theme_mod('title_slider') ?></h1>
           <span class="separator"><img src="./assets/img/pink-chat.png" /></span>
         </div>
 
         <div class="col-12">
           <swiper-container class="swiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" loop="true">
             <?php
-              $repeater = get_theme_mod('customizer_repeater_slider', json_encode(array(/*The content from your default parameter or delete this argument if you don't want a default*/)));
-              /*This returns a json so we have to decode it*/
-              $repeater_decoded = json_decode($repeater);
-              foreach ($repeater_decoded as $repeater_item) : ?>
+            $repeater = get_theme_mod('customizer_repeater_slider', json_encode(array(/*The content from your default parameter or delete this argument if you don't want a default*/)));
+            /*This returns a json so we have to decode it*/
+            $repeater_decoded = json_decode($repeater);
+            foreach ($repeater_decoded as $repeater_item) : ?>
 
               <swiper-slide>
-                    <div class="px-5 p-lg-5 mx-2 mx-lg-5 text-center">
-                      <h2><?= $repeater_item->title; ?> - <?= $repeater_item->subtitle; ?></h2>
-                      <p>
-                        <?= $repeater_item->text; ?>
-                      </p>
-                    </div>
-                  </swiper-slide>
-              <?php
-              endforeach;
+                <div class="px-5 p-lg-5 mx-2 mx-lg-5 text-center">
+                  <h2><?= $repeater_item->title; ?> - <?= $repeater_item->subtitle; ?></h2>
+                  <p>
+                    <?= $repeater_item->text; ?>
+                  </p>
+                </div>
+              </swiper-slide>
+            <?php
+            endforeach;
             ?>
           </swiper-container>
         </div>
@@ -231,54 +189,24 @@
       <div class="row align-items-center">
         <div class="col-12 col-md-8 col-lg-6 d-flex flex-column gap-4 mb-5 mb-lg-0">
           <span class="text">
-            Se quiser falar comigo sobre sessões de Psicoterapia, Coaching,
-            Workshops ou Treinamentos,
-            <strong>agende uma conversa comigo pelo whatsapp ou enviando um
-              email</strong>.
+            <?= get_theme_mod('text_contact') ?>
           </span>
 
           <div class="d-flex align-items-center gap-3 contact-info">
-            <img src="./assets/img/12.png" /><span>21 22222222222</span>
+            <img src="<?= get_theme_mod('img_contact_1') ?>" /><span><?= get_theme_mod('contact_1') ?></span>
           </div>
 
           <div class="d-flex align-items-center gap-3 contact-info">
-            <img src="./assets/img/13.png" /><span>contato@patriciacaliano.com.br</span>
+            <img src="<?= get_theme_mod('img_contact_2') ?>" /><span><?= get_theme_mod('contact_2') ?></span>
           </div>
         </div>
 
         <div class="col-12 col-md-4 col-lg-6">
-          <img src="./assets/img/patricia-perfil.png" alt="" id="contact-picture" />
+          <img src="<?= get_theme_mod('img_contact') ?>" alt="" id="contact-picture" />
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<footer id="default-footer">
-  <div class="container">
-    <div class="row justify-content-between align-items-center">
-      <div class="col-12 col-md-4 col-lg-6 d-flex gap-3 social-media">
-        <a href="#">
-          <img src="./assets/img/15.png" alt="" />
-        </a>
-        <a href="#">
-          <img src="./assets/img/16.png" alt="" />
-        </a>
-        <a href="#">
-          <img src="./assets/img/17.png" alt="" />
-        </a>
-      </div>
-
-      <div class="col-12 col-md-8 col-lg-6">
-        <p>
-          © Copyright 2024 Patricia Caliano - Todos os direitos reservados
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src=""></script>
-</body>
-
-</html>
+<?php get_footer() ?>

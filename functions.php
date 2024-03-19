@@ -32,6 +32,7 @@ function theme_customizer_settings($wp_customize)
     include_once('functions/customizer/latest-posts.php');
     include_once('functions/customizer/slider.php');
     include_once('functions/customizer/contact.php');
+    include_once('functions/customizer/footer.php');
 }
 
 add_action('customize_register', 'theme_customizer_settings');

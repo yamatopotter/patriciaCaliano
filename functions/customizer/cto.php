@@ -59,7 +59,7 @@ $wp_customize->add_control(new WP_Customize_Control(
     $wp_customize,
     'text_btn_cto',
     array(
-        'label'      => __('Segunda linha de título em negrito', 'text_btn_cto'),
+        'label'      => __('Texto do botão de CTO', 'text_btn_cto'),
         'settings'   => 'text_btn_cto',
         'section'    => 'cto_section',
         'type'       => 'text'
@@ -79,7 +79,7 @@ $wp_customize->add_control(new WP_Customize_Control(
     $wp_customize,
     'link_btn_cto',
     array(
-        'label'      => __('Segunda linha de título em negrito', 'link_btn_cto'),
+        'label'      => __('Link do botão de CTO', 'link_btn_cto'),
         'settings'   => 'link_btn_cto',
         'section'    => 'cto_section',
         'type'       => 'text'

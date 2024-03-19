@@ -31,7 +31,7 @@ $wp_customize->add_setting('customizer_repeater_slider', array(
     'sanitize_callback' => 'customizer_repeater_sanitize'
 ));
 $wp_customize->add_control(new Customizer_Repeater($wp_customize, 'customizer_repeater_slider', array(
-    'label'   => esc_html__('Psicoterapias', 'customizer-repeater'),
+    'label'   => esc_html__('Objetos do slider', 'customizer-repeater'),
     'section' => 'slider_section',
     'priority' => 1,
     'customizer_repeater_image_control' => false,

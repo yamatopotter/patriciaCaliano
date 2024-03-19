@@ -7,9 +7,29 @@ $wp_customize->add_section('contact_section', array(
     'panel'    => 'start_panel'
 ));
 
+// Foto do contato
+$wp_customize->add_setting(
+    'img_contact_1',
+    array(
+        'default' => '',
+        'transport' => 'refresh',
+    )
+);
+
+$wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    'img_contact_1',
+    array(
+        'label'      => __('Imagem da forma contato 1', 'img_contact_1'),
+        'settings'   => 'img_contact_1',
+        'section'    => 'contact_section',
+        'type'       => 'image'
+    )
+));
+
 // Linha um do titulo da intro
 $wp_customize->add_setting(
-    'whatsapp_contact',
+    'contact_1',
     array(
         'default' => '',
         'transport' => 'refresh'
@@ -18,18 +38,38 @@ $wp_customize->add_setting(
 
 $wp_customize->add_control(new WP_Customize_Control(
     $wp_customize,
-    'whatsapp_contact',
+    'contact_1',
     array(
-        'label'      => __('Contato do whatsapp', 'whatsapp_contact'),
-        'settings'   => 'whatsapp_contact',
+        'label'      => __('Forma de contato 1', 'contact_1'),
+        'settings'   => 'contact_1',
         'section'    => 'contact_section',
         'type'       => 'text'
     )
 ));
 
+// Foto do contato
+$wp_customize->add_setting(
+    'img_contact_2',
+    array(
+        'default' => '',
+        'transport' => 'refresh',
+    )
+);
+
+$wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    'img_contact_2',
+    array(
+        'label'      => __('Imagem da forma de contato 2', 'img_contact_2'),
+        'settings'   => 'img_contact_2',
+        'section'    => 'contact_section',
+        'type'       => 'image'
+    )
+));
+
 // Linha dois do titulo da intro
 $wp_customize->add_setting(
-    'email_contact',
+    'contact_2',
     array(
         'default' => '',
         'transport' => 'postMessage'
@@ -38,10 +78,10 @@ $wp_customize->add_setting(
 
 $wp_customize->add_control(new WP_Customize_Control(
     $wp_customize,
-    'email_contact',
+    'contact_2',
     array(
-        'label'      => __('Contato do email', 'email_contact'),
-        'settings'   => 'email_contact',
+        'label'      => __('Forma de contato 2', 'contact_2'),
+        'settings'   => 'contact_2',
         'section'    => 'contact_section',
         'type'       => 'text'
     )
@@ -60,7 +100,7 @@ $wp_customize->add_control(new WP_Customize_Image_Control(
     $wp_customize,
     'img_contact',
     array(
-        'label'      => __('Imagem principal', 'img_contact'),
+        'label'      => __('Imagem principal da sessão de contato', 'img_contact'),
         'settings'   => 'img_contact',
         'section'    => 'contact_section',
         'type'       => 'image'

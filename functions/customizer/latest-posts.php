@@ -19,7 +19,7 @@ $wp_customize->add_control(new WP_Customize_Control(
     $wp_customize,
     'title_latest_posts',
     array(
-        'label'      => __('Primeira linha de título', 'title_latest_posts'),
+        'label'      => __('Título da sessão', 'title_latest_posts'),
         'settings'   => 'title_latest_posts',
         'section'    => 'latest_posts_section',
         'type'       => 'text'
