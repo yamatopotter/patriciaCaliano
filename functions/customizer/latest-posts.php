@@ -21,7 +21,7 @@ $wp_customize->add_control(new WP_Customize_Control(
     array(
         'label'      => __('Primeira linha de título', 'title_latest_posts'),
         'settings'   => 'title_latest_posts',
-        'section'    => 'about_specific_service_section',
+        'section'    => 'latest_posts_section',
         'type'       => 'text'
     )
 ));

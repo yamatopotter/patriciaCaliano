@@ -135,7 +135,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center mb-4">
-          <h1><?= get_theme_mod('title_latest_posts') == '') ? 'Novidades no Blog' : get_theme_mod('title_latest_posts') ?></h1>
+          <h1><?= get_theme_mod('title_latest_posts') == '' ? 'Novidades no Blog' : get_theme_mod('title_latest_posts') ?></h1>
           <span class="separator"><img src="./assets/img/dark-pink-comment.png" /></span>
         </div>
       </div>
@@ -203,56 +203,23 @@
 
         <div class="col-12">
           <swiper-container class="swiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30" loop="true">
-            <swiper-slide>
-              <div class="px-5 p-lg-5 mx-2 mx-lg-5 text-center">
-                <h2>Rodrigo Estevez - Vestibulando</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Perspiciatis voluptate animi odit quam ipsa sint delectus
-                  voluptatum, neque impedit culpa, consectetur beatae quis
-                  facilis doloribus maxime laboriosam voluptas iste veniam.
-                  Tempora odit aliquid laudantium perspiciatis fugiat iusto.
-                  Officia voluptatem reiciendis voluptate necessitatibus
-                  nostrum quo id. Neque enim delectus sequi ipsam temporibus
-                  quidem necessitatibus ratione, eius id molestias voluptate
-                  praesentium corporis!
-                </p>
-              </div>
-            </swiper-slide>
+            <?php
+              $repeater = get_theme_mod('customizer_repeater_slider', json_encode(array(/*The content from your default parameter or delete this argument if you don't want a default*/)));
+              /*This returns a json so we have to decode it*/
+              $repeater_decoded = json_decode($repeater);
+              foreach ($repeater_decoded as $repeater_item) : ?>
 
-            <swiper-slide>
-              <div class="px-5 pb-5 p-lg-5 mx-2 mx-lg-5 text-center">
-                <h2>Rodrigo Estevez - Vestibulando</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Perspiciatis voluptate animi odit quam ipsa sint delectus
-                  voluptatum, neque impedit culpa, consectetur beatae quis
-                  facilis doloribus maxime laboriosam voluptas iste veniam.
-                  Tempora odit aliquid laudantium perspiciatis fugiat iusto.
-                  Officia voluptatem reiciendis voluptate necessitatibus
-                  nostrum quo id. Neque enim delectus sequi ipsam temporibus
-                  quidem necessitatibus ratione, eius id molestias voluptate
-                  praesentium corporis!
-                </p>
-              </div>
-            </swiper-slide>
-
-            <swiper-slide>
-              <div class="px-5 pb-5 p-lg-5 mx-2 mx-lg-5 text-center">
-                <h2>Rodrigo Estevez - Vestibulando</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Perspiciatis voluptate animi odit quam ipsa sint delectus
-                  voluptatum, neque impedit culpa, consectetur beatae quis
-                  facilis doloribus maxime laboriosam voluptas iste veniam.
-                  Tempora odit aliquid laudantium perspiciatis fugiat iusto.
-                  Officia voluptatem reiciendis voluptate necessitatibus
-                  nostrum quo id. Neque enim delectus sequi ipsam temporibus
-                  quidem necessitatibus ratione, eius id molestias voluptate
-                  praesentium corporis!
-                </p>
-              </div>
-            </swiper-slide>
+              <swiper-slide>
+                    <div class="px-5 p-lg-5 mx-2 mx-lg-5 text-center">
+                      <h2><?= $repeater_item->title; ?> - <?= $repeater_item->subtitle; ?></h2>
+                      <p>
+                        <?= $repeater_item->text; ?>
+                      </p>
+                    </div>
+                  </swiper-slide>
+              <?php
+              endforeach;
+            ?>
           </swiper-container>
         </div>
       </div>
