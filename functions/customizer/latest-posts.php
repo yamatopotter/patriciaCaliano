@@ -25,3 +25,23 @@ $wp_customize->add_control(new WP_Customize_Control(
         'type'       => 'text'
     )
 ));
+
+// Imagem do separador
+$wp_customize->add_setting(
+    'icon_separator_latest_posts',
+    array(
+        'default' => '',
+        'transport' => 'refresh',
+    )
+);
+
+$wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    'icon_separator_latest_posts',
+    array(
+        'label'      => __('Imagem do separador', 'icon_separator_latest_posts'),
+        'settings'   => 'icon_separator_latest_posts',
+        'section'    => 'latest_posts_section',
+        'type'       => 'image'
+    )
+));

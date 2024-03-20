@@ -219,6 +219,14 @@ h4,
 #latest-posts {
   background-color: #e1dacb;
 }
+#latest-posts h1 {
+  height: 50px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #610e24;
+}
 #latest-posts h1 a {
   color: #610e24;
   text-decoration: none;
@@ -406,6 +414,7 @@ swiper-container::part(bullet-active) {
   display: flex;
   gap: 2rem;
   color: #610e24;
+  align-items: center;
 }
 #post-list .post-card img {
   max-width: 33%;

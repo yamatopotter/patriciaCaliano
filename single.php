@@ -18,7 +18,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 d-flex flex-column mb-4">
-                            <img src="http://placehold.co/800x600" id="post-thumbnail" />
+                            <?php if (!empty(get_the_post_thumbnail_url($post, 'large'))) : ?>
+                                <img src="<?= get_the_post_thumbnail_url($post, 'large') ?>" id="post-thumbnail" />
+                            <?php endif; ?>
                             <div class="post-metadata">
                                 <time class="post-date">Publicado em: <?= the_date() ?> às <?= the_time() ?></time>
                             </div>

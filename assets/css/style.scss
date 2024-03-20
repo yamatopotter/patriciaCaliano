@@ -239,6 +239,13 @@ h4,
 #latest-posts {
   background-color: $dark-yellow;
   h1{
+    height: 50px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: $dark-pink;
+    
     a{
       color: $dark-pink;
       text-decoration: none;
@@ -251,7 +258,6 @@ h4,
     width: 100%;
     overflow: hidden;
     display: -webkit-box;
-    // height: 65px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
@@ -461,6 +467,7 @@ swiper-container::part(bullet-active) {
     display: flex;
     gap: 2rem;
     color: $dark-pink;
+    align-items: center;
 
     img {
       max-width: 33%;

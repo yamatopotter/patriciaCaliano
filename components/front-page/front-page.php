@@ -45,7 +45,9 @@
         <div class="row">
             <div class="col-12 text-center mb-5">
                 <h1 class="last-word-bold"><?= get_theme_mod('title_psychotherapies') == '' ? 'As minhas Psicoterapias' : get_theme_mod('title_psychotherapies') ?></h1>
-                <span class="separator"><img src="./assets/img/pink-brain.png" /></span>
+                <span class="separator"><img src="<?= get_theme_mod('icon_separator_psychotherapies') == '' ?
+                                                        get_template_directory_uri() . '/assets/img/pink-brain.png' :
+                                                        get_theme_mod('icon_separator_psychotherapies') ?>" /></span>
             </div>
 
             <?php
@@ -117,7 +119,9 @@
         <div class="row">
             <div class="col-12 text-center mb-4">
                 <h1><?= get_theme_mod('title_latest_posts') == '' ? 'Novidades no Blog' : get_theme_mod('title_latest_posts') ?></h1>
-                <span class="separator"><img src="./assets/img/dark-pink-comment.png" /></span>
+                <span class="separator"><img src="<?= get_theme_mod('icon_separator_latest_posts') == '' ?
+                                                        get_template_directory_uri() . '/assets/img/dark-pink-comment.png' :
+                                                        get_theme_mod('icon_separator_latest_posts') ?>" /></span>
             </div>
         </div>
 
@@ -130,11 +134,11 @@
                                 <a href="<?= the_permalink() ?>"><?= the_title(); ?></a>
                             </h1>
 
+                            <time class='post-date'><?= the_date() ?></time>
+
+                            <hr class="mb-3">
 
                             <?= the_excerpt(); ?>
-
-
-                            <time><?= the_date() ?></time>
                         </div>
                     </article>
             <?php endwhile;
@@ -152,7 +156,9 @@
         <div class="row">
             <div class="col-12 text-center mb-4">
                 <h1><?= get_theme_mod('title_slider') == '' ? 'Quem confia no meu trabalho' : get_theme_mod('title_slider') ?></h1>
-                <span class="separator"><img src="./assets/img/pink-chat.png" /></span>
+                <span class="separator"><img src="<?= get_theme_mod('icon_separator_slider') == '' ?
+                                                        get_template_directory_uri() . '/assets/img/pink-chat.png' :
+                                                        get_theme_mod('icon_separator_slider') ?>" /></span>
             </div>
 
             <div class="col-12">

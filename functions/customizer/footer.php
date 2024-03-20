@@ -1,9 +1,9 @@
 <?php
 
 $wp_customize->add_section('footer_section', array(
-    'title'      => __('Rodapé'),
+    'title'      => __('Redes Sociais'),
     'priority'   => 30,
-    'panel'    => 'start_panel'
+    'panel'    => 'footer_panel'
 ));
 
 // Linha um do titulo da intro

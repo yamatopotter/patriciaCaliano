@@ -43,3 +43,23 @@ $wp_customize->add_control(new Customizer_Repeater($wp_customize, 'customizer_re
     'customizer_repeater_shortcode_control' => false,
     'customizer_repeater_repeater_control' => false
 )));
+
+// Imagem do separador
+$wp_customize->add_setting(
+    'icon_separator_psychotherapies',
+    array(
+        'default' => '',
+        'transport' => 'refresh',
+    )
+);
+
+$wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize,
+    'icon_separator_psychotherapies',
+    array(
+        'label'      => __('Imagem do separador', 'icon_separator_psychotherapies'),
+        'settings'   => 'icon_separator_psychotherapies',
+        'section'    => 'psychotherapies_section',
+        'type'       => 'image'
+    )
+));

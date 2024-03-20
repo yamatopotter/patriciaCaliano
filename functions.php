@@ -24,6 +24,24 @@ function theme_customizer_settings($wp_customize)
         'description'    => ''
     ));
 
+    // Painel Página Inicial
+    $wp_customize->add_panel('footer_panel', array(
+        'priority'   => 22,
+        'capability'     => 'edit_theme_options',
+        'theme_supports' => '',
+        'title'          => 'Rodapé',
+        'description'    => ''
+    ));
+
+    // Painel Página Inicial
+    $wp_customize->add_panel('blog_panel', array(
+        'priority'   => 23,
+        'capability'     => 'edit_theme_options',
+        'theme_supports' => '',
+        'title'          => 'Blog',
+        'description'    => ''
+    ));
+
     include_once('functions/customizer/header.php');
     include_once('functions/customizer/about-me.php');
     include_once('functions/customizer/psychoterapies.php');
@@ -33,6 +51,7 @@ function theme_customizer_settings($wp_customize)
     include_once('functions/customizer/slider.php');
     include_once('functions/customizer/contact.php');
     include_once('functions/customizer/footer.php');
+    include_once('functions/customizer/blog.php');
 }
 
 add_action('customize_register', 'theme_customizer_settings');
