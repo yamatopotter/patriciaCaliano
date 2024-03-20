@@ -26,31 +26,13 @@ $wp_customize->add_control(new WP_Customize_Control(
     )
 ));
 
-//Conteúdo do slider
-$wp_customize->add_setting('customizer_repeater_slider', array(
-    'sanitize_callback' => 'customizer_repeater_sanitize'
-));
-$wp_customize->add_control(new Customizer_Repeater($wp_customize, 'customizer_repeater_slider', array(
-    'label'   => esc_html__('Objetos do slider', 'customizer-repeater'),
-    'section' => 'slider_section',
-    'priority' => 1,
-    'customizer_repeater_image_control' => false,
-    'customizer_repeater_icon_control' => false,
-    'customizer_repeater_title_control' => true,
-    'customizer_repeater_subtitle_control' => true,
-    'customizer_repeater_text_control' => true,
-    'customizer_repeater_link_control' => false,
-    'customizer_repeater_shortcode_control' => false,
-    'customizer_repeater_repeater_control' => false
-)));
-
 // Imagem do separador
 $wp_customize->add_setting(
     'icon_separator_slider',
     array(
         'default' => '',
         'transport' => 'refresh',
-    )
+        )
 );
 
 $wp_customize->add_control(new WP_Customize_Image_Control(
@@ -61,5 +43,23 @@ $wp_customize->add_control(new WP_Customize_Image_Control(
         'settings'   => 'icon_separator_slider',
         'section'    => 'slider_section',
         'type'       => 'image'
-    )
+        )
 ));
+
+//Conteúdo do slider
+$wp_customize->add_setting('customizer_repeater_slider', array(
+    'sanitize_callback' => 'customizer_repeater_sanitize'
+));
+$wp_customize->add_control(new Customizer_Repeater($wp_customize, 'customizer_repeater_slider', array(
+    'label'   => esc_html__('Objetos do slider', 'customizer-repeater'),
+    'section' => 'slider_section',
+    'priority' => 30,
+    'customizer_repeater_image_control' => false,
+    'customizer_repeater_icon_control' => false,
+    'customizer_repeater_title_control' => true,
+    'customizer_repeater_subtitle_control' => true,
+    'customizer_repeater_text_control' => true,
+    'customizer_repeater_link_control' => false,
+    'customizer_repeater_shortcode_control' => false,
+    'customizer_repeater_repeater_control' => false
+)));
