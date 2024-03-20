@@ -8,11 +8,14 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+    <style>
+        :root {
+            --background-intro: url('<?= get_theme_mod('background_intro') == '' ? get_template_directory_uri() . '/assets/img/background-intro.png' : get_theme_mod('background_intro') ?>');
+        }
+    </style>
 
     <meta http-equiv="cleartype" content="on">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
     <?php wp_head(); ?>
 </head>
 

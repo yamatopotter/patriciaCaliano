@@ -143,7 +143,7 @@ h4,
 // Intro - Home
 
 #intro {
-  background: url("../img/03.png") no-repeat center center/cover;
+  background: var(--background-intro) no-repeat center center/cover;
   color: #fff;
   h1 {
     color: #fff;
