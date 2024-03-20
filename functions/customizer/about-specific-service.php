@@ -2,7 +2,7 @@
 // Specific service section
 $wp_customize->add_section('about_specific_service_section', array(
     'title'      => __('Serviço específico'),
-    'priority'   => 0,
+    'priority'   => 4,
     'panel'    => 'start_panel'
 ));
 

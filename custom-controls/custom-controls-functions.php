@@ -14,7 +14,7 @@ if (!function_exists('skyrocket_scripts_styles')) {
     {
         // Register and enqueue our icon font
         // We're using the awesome Font Awesome icon font. https://fontawesome.com
-        wp_register_style('fontawesome', trailingslashit(get_template_directory_uri()) . 'css/fontawesome-all.min.css', array(), '6.4.2', 'all');
+        wp_register_style('fontawesome', trailingslashit(get_template_directory_uri()) . 'custom-controls/css/fontawesome-all.min.css', array(), '6.4.2', 'all');
         wp_enqueue_style('fontawesome');
     }
 }
@@ -29,7 +29,7 @@ add_action('customize_controls_print_styles', 'skyrocket_scripts_styles');
 if (!function_exists('skyrocket_customizer_preview_scripts')) {
     function skyrocket_customizer_preview_scripts()
     {
-        wp_enqueue_script('skyrocket-customizer-preview', trailingslashit(get_template_directory_uri()) . 'js/customizer-preview.js', array('customize-preview', 'jquery'));
+        wp_enqueue_script('skyrocket-customizer-preview', trailingslashit(get_template_directory_uri()) . 'custom-controls/js/customizer-preview.js', array('customize-preview', 'jquery'));
     }
 }
 add_action('customize_preview_init', 'skyrocket_customizer_preview_scripts');

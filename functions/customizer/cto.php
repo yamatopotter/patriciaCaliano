@@ -2,7 +2,7 @@
 // CTO Section
 $wp_customize->add_section('cto_section', array(
     'title'      => __('Call to Action'),
-    'priority'   => 0,
+    'priority'   => 3,
     'panel'    => 'start_panel'
 ));
 

@@ -3,7 +3,7 @@
 // Header Section
 $wp_customize->add_section('contact_section', array(
     'title'      => __('Contato'),
-    'priority'   => 1,
+    'priority'   => 7,
     'panel'    => 'start_panel'
 ));
 

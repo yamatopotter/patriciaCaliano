@@ -2,7 +2,7 @@
 // Psychotherapies Section
 $wp_customize->add_section('slider_section', array(
     'title'      => __('Slider'),
-    'priority'   => 2,
+    'priority'   => 6,
     'panel'    => 'start_panel'
 ));
 

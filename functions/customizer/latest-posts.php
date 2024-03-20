@@ -2,7 +2,7 @@
 // Latest posts section
 $wp_customize->add_section('latest_posts_section', array(
     'title'      => __('Ultimos posts'),
-    'priority'   => 0,
+    'priority'   => 5,
     'panel'    => 'start_panel'
 ));
 

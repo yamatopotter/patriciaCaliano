@@ -97,6 +97,24 @@ h4,
   width: 30px;
 }
 
+.post-nav a {
+  font-weight: bold;
+  background-color: #de3867;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transition: 0.3s ease all;
+}
+.post-nav a:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background-color: #610e24;
+}
+
 .navbar {
   padding: 10px 0;
   font-weight: bold;
@@ -120,7 +138,7 @@ h4,
 #intro h1 {
   color: #fff;
 }
-#intro #brain-img {
+#intro img {
   max-width: 100px;
 }
 
@@ -201,9 +219,17 @@ h4,
 #latest-posts {
   background-color: #e1dacb;
 }
-#latest-posts h1,
+#latest-posts h1 a {
+  color: #610e24;
+  text-decoration: none;
+}
 #latest-posts p {
   color: #610e24;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 #latest-posts .separator::before, #latest-posts .separator::after {
   background-color: #610e24;

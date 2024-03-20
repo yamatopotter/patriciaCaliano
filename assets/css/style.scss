@@ -98,6 +98,27 @@ h4,
   }
 }
 
+.post-nav{
+  a{
+    font-weight: bold;
+    background-color: $bright-pink;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 0.5rem 1.25rem;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    transition: .3s ease all;
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+      background-color: #610e24;
+    }
+  }
+}
+
 // Navbar
 
 .navbar {
@@ -217,9 +238,22 @@ h4,
 
 #latest-posts {
   background-color: $dark-yellow;
-  h1,
-  p {
+  h1{
+    a{
+      color: $dark-pink;
+      text-decoration: none;
+    }
+  }
+
+
+  p{
     color: $dark-pink;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    // height: 65px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   .separator {

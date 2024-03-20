@@ -1,6 +1,6 @@
 <?php
 require_once('functions/assets.php');
-require_once('custom-controls-functions.php');
+require_once('custom-controls/custom-controls-functions.php');
 require_once('customizer-repeater/functions.php');
 require_once('customizer-repeater/inc/customizer.php');
 require_once('functions/navwalker-bootstrap.php');
@@ -36,3 +36,30 @@ function theme_customizer_settings($wp_customize)
 }
 
 add_action('customize_register', 'theme_customizer_settings');
+
+// Custom posts quantity for home
+function custom_posts_per_page($query)
+{
+    if ((is_front_page() || is_home()) && isFrontPageWithoutPagination()) { // Se estiver na página inicial ou em uma página de arquivo
+        $posts_per_page = get_option('posts_per_page'); // Obtém o número padrão de posts por página definido nas configurações do WordPress
+        if ($posts_per_page) {
+            $query->set('posts_per_page', 3); // Define o número de posts por página como o número padrão
+        }
+    }
+}
+add_action('pre_get_posts', 'custom_posts_per_page');
+
+function isFrontPageWithoutPagination()
+{
+    global $wp;
+
+    $current_url =  home_url($wp->request);
+    $position = strpos($current_url, '/page');
+    $nopaging_url = ($position) ? substr($current_url, 0, $position) : $current_url;
+
+    if ($nopaging_url == $current_url) {
+        return true;
+    }
+
+    return false;
+}
