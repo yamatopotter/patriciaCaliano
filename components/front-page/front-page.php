@@ -49,7 +49,9 @@
                                                         get_template_directory_uri() . '/assets/img/pink-brain.png' :
                                                         get_theme_mod('icon_separator_psychotherapies') ?>" /></span>
             </div>
+        </div>
 
+        <div class="row justify-content-center">
             <?php
             $repeater = get_theme_mod('customizer_repeater_psychotherapies', json_encode(array(/*The content from your default parameter or delete this argument if you don't want a default*/)));
             /*This returns a json so we have to decode it*/

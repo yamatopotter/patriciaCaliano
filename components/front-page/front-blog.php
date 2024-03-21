@@ -29,7 +29,7 @@
                 <footer class="d-flex justify-content-between post-nav">
                     <?= isFrontPageWithoutPagination() ?>
                     <?= get_previous_posts_link("← Posts recentes") ?>
-                    <?= get_next_posts_link("Posts anteriores → ") ?>
+                    <?= get_next_posts_link("Posts anteriores →") ?>
                 </footer>
             </section>
 

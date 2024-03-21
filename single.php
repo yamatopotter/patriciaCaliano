@@ -34,11 +34,11 @@
                 <footer>
                     <div class="container">
                         <div class="row">
-                            <div class="col-12 col-md-6 d-flex justify-content-start mb-2 mb-md-0">
-                                <?php previous_post_link() ?>
+                            <div class="col-12 col-md-6 d-flex justify-content-start mb-2 mb-md-0 post-nav">
+                                <?php previous_post_link('%link', '← Próxima publicação') ?>
                             </div>
-                            <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-                                <?php next_post_link() ?>
+                            <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end post-nav">
+                                <?php next_post_link('%link', 'Publicação anterior →') ?>
                             </div>
                         </div>
                     </div>
