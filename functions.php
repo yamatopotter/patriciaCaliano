@@ -56,17 +56,13 @@ function theme_customizer_settings($wp_customize)
 
 add_action('customize_register', 'theme_customizer_settings');
 
-// Custom posts quantity for home
-function custom_posts_per_page($query)
+// Return the post page url
+function get_posts_page_url()
 {
-    if ((is_front_page() || is_home()) && isFrontPageWithoutPagination()) { // Se estiver na página inicial ou em uma página de arquivo
-        $posts_per_page = get_option('posts_per_page'); // Obtém o número padrão de posts por página definido nas configurações do WordPress
-        if ($posts_per_page) {
-            $query->set('posts_per_page', 3); // Define o número de posts por página como o número padrão
-        }
-    }
+    $posts_page_id = get_option('page_for_posts');
+    $post_page_url = get_permalink($posts_page_id);
+    return $post_page_url;
 }
-add_action('pre_get_posts', 'custom_posts_per_page');
 
 function isFrontPageWithoutPagination()
 {

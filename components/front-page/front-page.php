@@ -159,7 +159,7 @@ $latest_posts = new WP_Query(array(
             endif ?>
 
             <div class="col-12 d-flex justify-content-center mt-0 mt-lg-5 post-nav align-items-center">
-                <a href="<?= get_post_type_archive_link('midia'); ?>" class="btn btn-primary">Veja mais publicações<i class="bi bi-arrow-right"></i></a>
+                <a href="<?= get_posts_page_url() ?>" class="btn btn-primary">Veja mais publicações<i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </div>
