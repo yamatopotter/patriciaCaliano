@@ -238,6 +238,7 @@ h4,
 
 #latest-posts {
   background-color: $dark-yellow;
+
   h1{
     height: 50px;
     overflow: hidden;
@@ -245,6 +246,10 @@ h4,
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     color: $dark-pink;
+
+    &:first-child{
+      height: 60px;
+    }
     
     a{
       color: $dark-pink;

@@ -1,3 +1,13 @@
+<?php
+// Query latest 3 posts
+$latest_posts = new WP_Query(array(
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+    'order' => 'DESC',
+));
+
+?>
+
 <section id="intro">
     <div class="container">
         <div class="row">
@@ -131,7 +141,7 @@
 
         <div class="row">
 
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php if ($latest_posts->have_posts()) : while ($latest_posts->have_posts()) : $latest_posts->the_post(); ?>
                     <article class="col-12 col-lg-4">
                         <div class="card">
                             <h1>
@@ -149,7 +159,7 @@
             endif ?>
 
             <div class="col-12 d-flex justify-content-center mt-0 mt-lg-5 post-nav align-items-center">
-                <?= get_next_posts_link("Veja mais publicações") ?>
+                <a href="<?= get_post_type_archive_link('midia'); ?>" class="btn btn-primary">Veja mais publicações<i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </div>
