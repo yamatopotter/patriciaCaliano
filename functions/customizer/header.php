@@ -118,3 +118,29 @@ $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'textarea_con
     'settings' => 'text_intro',
     'type'     => 'textarea',
 )));
+
+// Texto do botão do intro
+$wp_customize->add_setting('text_btn_intro', array(
+    'default'   => '',
+    'transport' => 'refresh',
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'text_btn_intro', array(
+    'label'    => __('Texto do botão da introdução', 'text_btn_intro'),
+    'section'  => 'header_section',
+    'settings' => 'text_btn_intro',
+    'type'     => 'text',
+)));
+
+// Link do intro
+$wp_customize->add_setting('link_btn_intro', array(
+    'default'   => '',
+    'transport' => 'refresh',
+));
+
+$wp_customize->add_control(new WP_Customize_Control($wp_customize, 'link_btn_intro', array(
+    'label'    => __('Link do botão da introdução', 'link_btn_intro'),
+    'section'  => 'header_section',
+    'settings' => 'link_btn_intro',
+    'type'     => 'text',
+)));

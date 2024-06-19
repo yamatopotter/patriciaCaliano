@@ -14,8 +14,10 @@
                     <?= get_theme_mod('text_intro'); ?>
                 </p>
 
-                <?php if (get_theme_mod('link_btn') != '') : ?>
-                    <a href="<?= get_theme_mod('link_btn') ?>" class="btn btn-primary">Saiba mais</a>
+                <?php if (get_theme_mod('link_btn_intro') != '') : ?>
+                    <a href="<?= get_theme_mod('link_btn_intro') ?>" class="btn btn-primary">
+                        <?= get_theme_mod('text_btn_intro') ? get_theme_mod("text_btn_intro") : "Saiba mais" ?>
+                    </a>
                 <?php endif; ?>
             </div>
         </div>
@@ -77,14 +79,14 @@
 <section id="cto-1">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-7">
                 <h1 class="d-flex flex-column text-center text-md-end">
                     <span><?= get_theme_mod('title_cto_l1') == '' ? 'Faça o agendamento' : get_theme_mod('title_cto_l1'); ?></span>
                     <span class="bold"><?= get_theme_mod('title_cto_l2') == '' ? 'Faça o agendamento' : get_theme_mod('title_cto_l2'); ?></span>
                 </h1>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5">
                 <a href="<?= get_theme_mod('link_btn_cto') == '' ? '#' : get_theme_mod('link_btn_cto'); ?>" class="btn btn-primary"><?= get_theme_mod('text_btn_cto') == '' ? 'Agende agora' : get_theme_mod('text_btn_cto'); ?></a>
             </div>
         </div>
@@ -136,7 +138,7 @@
                                 <a href="<?= the_permalink() ?>"><?= the_title(); ?></a>
                             </h1>
 
-                            <time class='post-date'><?= the_date() ?></time>
+                            <time class='post-date'><?= get_the_date() ?></time>
 
                             <hr class="mb-3">
 
