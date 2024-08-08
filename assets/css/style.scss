@@ -98,8 +98,8 @@ h4,
   }
 }
 
-.post-nav{
-  a{
+.post-nav {
+  a {
     font-weight: bold;
     background-color: $bright-pink;
     color: #fff;
@@ -108,8 +108,9 @@ h4,
     border-radius: 25px;
     padding: 0.5rem 1.25rem;
     width: fit-content;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    transition: .3s ease all;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    transition: 0.3s ease all;
 
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
@@ -148,7 +149,7 @@ h4,
   h1 {
     color: #fff;
   }
- img{
+  img {
     max-width: 100px;
   }
 }
@@ -174,7 +175,9 @@ h4,
 
 #psychotherapies {
   .service-item {
+    position: relative;
     gap: 1rem;
+    margin-bottom: 20px;
     @media screen and (max-width: 991px) {
       margin-bottom: 2rem;
 
@@ -184,11 +187,18 @@ h4,
     }
     img {
       max-width: 100%;
+      width: 120px;
     }
 
     p {
       text-align: center;
       margin-bottom: 0;
+    }
+
+    a {
+      position: absolute;
+      bottom: 0;
+      left: 33.33%;
     }
   }
 }
@@ -239,7 +249,7 @@ h4,
 #latest-posts {
   background-color: $dark-yellow;
 
-  h1{
+  h1 {
     height: 50px;
     overflow: hidden;
     display: -webkit-box;
@@ -247,18 +257,17 @@ h4,
     -webkit-box-orient: vertical;
     color: $dark-pink;
 
-    &:first-child{
+    &:first-child {
       height: 60px;
     }
-    
-    a{
+
+    a {
       color: $dark-pink;
       text-decoration: none;
     }
   }
 
-
-  p{
+  p {
     color: $dark-pink;
     width: 100%;
     overflow: hidden;
@@ -500,7 +509,7 @@ swiper-container::part(bullet-active) {
   opacity: 0.6;
 }
 
-.page-404{
+.page-404 {
   display: flex;
   flex-direction: column;
   height: 85vh;

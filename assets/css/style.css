@@ -160,7 +160,9 @@ h4,
 }
 
 #psychotherapies .service-item {
+  position: relative;
   gap: 1rem;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 991px) {
   #psychotherapies .service-item {
@@ -172,10 +174,16 @@ h4,
 }
 #psychotherapies .service-item img {
   max-width: 100%;
+  width: 120px;
 }
 #psychotherapies .service-item p {
   text-align: center;
   margin-bottom: 0;
+}
+#psychotherapies .service-item a {
+  position: absolute;
+  bottom: 0;
+  left: 33.33%;
 }
 
 #cto-1 {

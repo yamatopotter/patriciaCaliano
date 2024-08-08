@@ -52,57 +52,6 @@ $latest_posts = new WP_Query(array(
     </div>
 </section>
 
-<section id="psychotherapies">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h1 class="last-word-bold"><?= get_theme_mod('title_psychotherapies') == '' ? 'As minhas Psicoterapias' : get_theme_mod('title_psychotherapies') ?></h1>
-                <span class="separator"><img src="<?= get_theme_mod('icon_separator_psychotherapies') == '' ?
-                                                        get_template_directory_uri() . '/assets/img/pink-brain.png' :
-                                                        get_theme_mod('icon_separator_psychotherapies') ?>" /></span>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <?php
-            $repeater = get_theme_mod('customizer_repeater_psychotherapies', json_encode(array(/*The content from your default parameter or delete this argument if you don't want a default*/)));
-            /*This returns a json so we have to decode it*/
-            $repeater_decoded = json_decode($repeater);
-            foreach ($repeater_decoded as $repeater_item) : ?>
-
-                <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center service-item">
-                    <img src="<?= $repeater_item->image_url; ?>" />
-
-                    <p>
-                        <?= $repeater_item->text; ?>
-                    </p>
-
-                    <a href="<?= $repeater_item->link ?>" class="btn btn-primary">Saiba mais</a>
-                </div>
-            <?php
-            endforeach;
-            ?>
-        </div>
-    </div>
-</section>
-
-<section id="cto-1">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-7">
-                <h1 class="d-flex flex-column text-center text-md-end">
-                    <span><?= get_theme_mod('title_cto_l1') == '' ? 'Faça o agendamento' : get_theme_mod('title_cto_l1'); ?></span>
-                    <span class="bold"><?= get_theme_mod('title_cto_l2') == '' ? 'Faça o agendamento' : get_theme_mod('title_cto_l2'); ?></span>
-                </h1>
-            </div>
-
-            <div class="col-12 col-md-5">
-                <a href="<?= get_theme_mod('link_btn_cto') == '' ? '#' : get_theme_mod('link_btn_cto'); ?>" class="btn btn-primary"><?= get_theme_mod('text_btn_cto') == '' ? 'Agende agora' : get_theme_mod('text_btn_cto'); ?></a>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="about-specific-service">
     <div class="container">
         <div class="row align-items-center">
@@ -124,6 +73,57 @@ $latest_posts = new WP_Query(array(
             <div class="col-12 col-md-5 col-lg-4">
                 <img src="<?= get_theme_mod('img_specific_service') ?>" />
             </div>
+        </div>
+    </div>
+</section>
+
+<section id="cto-1">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 col-md-7">
+                <h1 class="d-flex flex-column text-center text-md-end">
+                    <span><?= get_theme_mod('title_cto_l1') == '' ? 'Faça o agendamento' : get_theme_mod('title_cto_l1'); ?></span>
+                    <span class="bold"><?= get_theme_mod('title_cto_l2') == '' ? 'Faça o agendamento' : get_theme_mod('title_cto_l2'); ?></span>
+                </h1>
+            </div>
+
+            <div class="col-12 col-md-5">
+                <a href="<?= get_theme_mod('link_btn_cto') == '' ? '#' : get_theme_mod('link_btn_cto'); ?>" class="btn btn-primary"><?= get_theme_mod('text_btn_cto') == '' ? 'Agende agora' : get_theme_mod('text_btn_cto'); ?></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="psychotherapies">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h1 class="last-word-bold"><?= get_theme_mod('title_psychotherapies') == '' ? 'As minhas Psicoterapias' : get_theme_mod('title_psychotherapies') ?></h1>
+                <span class="separator"><img src="<?= get_theme_mod('icon_separator_psychotherapies') == '' ?
+                                                        get_template_directory_uri() . '/assets/img/pink-brain.png' :
+                                                        get_theme_mod('icon_separator_psychotherapies') ?>" /></span>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <?php
+            $repeater = get_theme_mod('customizer_repeater_psychotherapies', json_encode(array(/*The content from your default parameter or delete this argument if you don't want a default*/)));
+            /*This returns a json so we have to decode it*/
+            $repeater_decoded = json_decode($repeater);
+            foreach ($repeater_decoded as $repeater_item) : ?>
+
+                <div class="col-12 col-md-6 col-lg-4 d-flex flex-column align-items-stretch service-item">
+                    <img src="<?= $repeater_item->image_url; ?>" class="mx-auto"/>
+
+                    <p>
+                        <?= $repeater_item->text; ?>
+                    </p>
+
+                    <a href="<?= $repeater_item->link ?>" class="btn btn-primary">Saiba mais</a>
+                </div>
+            <?php
+            endforeach;
+            ?>
         </div>
     </div>
 </section>
