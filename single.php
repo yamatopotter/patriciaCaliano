@@ -35,10 +35,10 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-md-6 d-flex justify-content-start mb-2 mb-md-0 post-nav">
-                                <?php previous_post_link('%link', '← Próxima publicação') ?>
+                                <?php previous_post_link('%link', '← Publicação anterior') ?>
                             </div>
                             <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end post-nav">
-                                <?php next_post_link('%link', 'Publicação anterior →') ?>
+                                <?php next_post_link('%link', 'Publicação mais recente →') ?>
                             </div>
                         </div>
                     </div>
