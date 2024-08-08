@@ -178,16 +178,9 @@ h4,
     position: relative;
     gap: 1rem;
     margin-bottom: 20px;
-    @media screen and (max-width: 991px) {
-      margin-bottom: 2rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
+    padding-bottom: 60px;
     img {
       max-width: 100%;
-      width: 120px;
     }
 
     p {
@@ -199,6 +192,14 @@ h4,
       position: absolute;
       bottom: 0;
       left: 33.33%;
+    }
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
